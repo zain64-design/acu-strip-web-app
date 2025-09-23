@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
-import loginBG from '/images/login-bg.png'
+import loginBG from '/images/login-bg.webp'
 import logo from '/images/login-logo.svg'
 import Image from '../components/ui/Image'
 import Text from '../components/ui/Text'
