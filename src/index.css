@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
 body {
-  @apply overflow-x-hidden bg-(--secondary-bg) h-[100%] box-border;
+  @apply overflow-x-hidden bg-(--bg-secondary) h-[100%] box-border;
 }
 svg>path,svg>g>path {
   @apply transition-all duration-300 ease-in-out;
@@ -15,36 +15,14 @@ svg>path,svg>g>path {
 @layer base {
 
   .dark {
-    --bg-white: #141414;
-    --bg-white-50: #1d1d1d;
-    --bg-black: #1d1d1d;
 
-    --btn-bg-white: #ffffff;
-    --btn-bg-black: transparent;
-
-    --bg-white-transparent-2: rgba(20, 20, 20, 0.4);
-
-    --bg-gray-100: #191919;
-    --bg-gray-200: #191919;
-    --bg-gray-300: #191919;
-
-    /* --text-white:#000000; */
-    --text-black: #ffffff;
-
-    --text-gray-200: #cccccc;
-    --text-gray-300: #999999;
-    --text-gray-400: #999999;
-
-    --border-black: #262626;
-    --border-gray-100: #262626;
-    --border-gray-300: #262626;
   }
 }
 
 @layer components {
 
     .btn-primary {
-      @apply bg-(--primary-bg) text-(--text-white) capitalize rounded-lg border border-(--border-primary) transition duration-500 ease-in-out cursor-pointer hover:bg-(--bg-white) hover:text-(--text-primary)
+      @apply !bg-(--btn-bg-primary) !text-(--btn-text-white) capitalize rounded-lg border border-(--border-primary) transition duration-500 ease-in-out cursor-pointer hover:!bg-(--btn-bg-hover) hover:!text-(--btn-text-green) p-2;
   }
 
   .login-form-para {
@@ -57,6 +35,18 @@ svg>path,svg>g>path {
 
 .form-bg::after {
   @apply content-[''] absolute inset-0 h-full z-[-1] bg-[linear-gradient(201deg,rgba(0,0,0,1)20%,rgba(0,0,0,0.5)60%,rgba(0,0,0,1)80%)] backdrop-blur-[4px];
+}
+
+.card {
+  @apply bg-(--bg-white) rounded-2xl;
+}
+
+.card-heading {
+  @apply font-urbanist font-bold text-lg sm:text-[22px] text-(--text-black-10) leading-normal capitalize;
+}
+
+.badge {
+  @apply rounded-md px-[5px] py-[4px] text-sm capitalize;
 }
 
 }
@@ -75,45 +65,41 @@ svg>path,svg>g>path {
   --font-outfit: 'Outfit', sans-serif;
   --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
   --font-urbanist: 'Urbanist', sans-serif;
+  --font-nunito: 'Nunito Sans', sans-serif;
 
-  --primary-bg: #1E9119;
-  --secondary-bg: #F5FFF9;
+  /* btn themes */
+  --btn-bg-primary: #1E9119;
+  --btn-text-white: #fff;
+  --btn-text-green: #1E9119;
+  --btn-bg-hover:#fff;
 
+  /* bg colors */
+  --bg-primary: #1E9119;
+  --bg-secondary: #F5FFF9;
+  --bg-secondary-2: #F0FEF6;
   --bg-white: #ffffff;
   --bg-white-50: #FDFDFD;
-  --bg-white-transparent-1: rgba(255, 255, 255, 0.1);
-  --bg-white-transparent-2: rgba(255, 255, 255, 0.5);
   --bg-black: #000000;
-  --bg-red-50: #ffebeb;
-  --bg-gray-100: #F0F0F0;
-  --bg-gray-200: #F2F0F1;
-  --bg-gray-300: #F0EEED;
 
-  --btn-bg-white: #ffffff;
-  --btn-bg-black: #000000;
-
-  --black-grey-grad: 
-
-  --btn-text-white: #ffffff;
-  --btn-text-black: #000000;
+    --bg-success: rgba(30, 145, 25, 0.20);
+    --bg-warning: rgba(255, 0, 17, 0.20);
 
 
   /* default tailwind 4 text color classes over ride */
   --text-primary: #1E9119;
   --text-white: #ffffff;
   --text-black: #000000;
-  --text-yellow-400: #FFC633;
+  --text-red: #FF0011;
+  --text-black-10: #04091E;
+  --text-black-50: #141516;
+  --text-gray-200: #64748B;
   --text-gray-300: #747681;
-  --text-gray-400: #616060;
-  --text-gray-500: #666666;
-  --text-gray-800:#04091E;
   --text-gray-900:#030303;
-  --text-red-600: #FF3333;
-  --text-green-500: #01AB31;
 
   --border-primary:#1E9119;
   --border-black: #000000;
   --border-gray-50: #D2D2D2;
+  --border-gray-100: rgba(100, 116, 139, 0.5);
 
   --soft-shadow: -0.5px -0.5px #fff, 1px 1px #999999;
 

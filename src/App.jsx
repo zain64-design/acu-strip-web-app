@@ -10,6 +10,7 @@ import UserManagement from "./pages/UserManagement"
 import VehicleManagement from "./pages/VehicleManagement"
 import EarningManagement from "./pages/EarningManagement"
 import Settings from "./pages/Settings"
+import Providers from "./redux/Providers"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
     <ThemeProvider theme={FlowBiteTheme}>
+      <Providers>
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<NotFound />} />
@@ -32,6 +34,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </Providers>
       </ThemeProvider>
     </>
   )

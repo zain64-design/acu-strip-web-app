@@ -49,7 +49,7 @@ const FlowBiteTheme = createTheme({
             }
         },
         "item": {
-            "base": "flex items-center justify-center rounded-xl px-[23px] py-4 font-outfit capitalize text-base font-normal text-(--text-gray-900) hover:bg-(--primary-bg) hover:text-(--text-white) dark:text-white dark:hover:bg-gray-700 transition-all duration-300 ease-in-out",
+            "base": "flex items-center justify-center rounded-xl px-[23px] py-4 font-outfit capitalize text-base font-normal text-(--text-gray-900) hover:bg-(--bg-primary) hover:text-(--text-white) dark:text-white dark:hover:bg-gray-700 transition-all duration-300 ease-in-out",
             "active": "bg-gray-100 dark:bg-gray-700",
             "collapsed": {
                 "insideCollapse": "group w-full pl-8 transition duration-75",
@@ -79,7 +79,31 @@ const FlowBiteTheme = createTheme({
             },
             "img": "mr-3 h-6 sm:h-7"
         }
+    },
+    table: {
+  "root": {
+    "base": "w-full text-left text-sm text-gray-500 dark:text-gray-400",
+    "shadow": "absolute left-0 top-0 -z-10 h-full w-full rounded-lg bg-white drop-shadow-none dark:bg-black",
+    "wrapper": "relative"
+  },
+  "body": {
+    "base": "group/body",
+    "cell": {
+      "base": "px-6 py-4 group-first/body:group-first/row:first:rounded-tl-lg group-first/body:group-first/row:last:rounded-tr-lg group-last/body:group-last/row:first:rounded-bl-lg group-last/body:group-last/row:last:rounded-br-lg"
     }
+  },
+  "head": {
+    "base": "group/head text-xs uppercase text-gray-700 dark:text-gray-400",
+    "cell": {
+      "base": "bg-gray-50 px-6 py-3 group-first/head:first:rounded-tl-lg group-first/head:last:rounded-tr-lg dark:bg-gray-700"
+    }
+  },
+  "row": {
+    "base": "group/row",
+    "hovered": "hover:bg-gray-50 dark:hover:bg-gray-600",
+    "striped": "odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
+  }
+}
 })
 
 export default FlowBiteTheme

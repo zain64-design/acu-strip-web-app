@@ -62,7 +62,7 @@ const Links = () => {
                         />
                     )} className={
                         `group ${isActive
-                            ? "font-semibold bg-(--primary-bg) text-(--text-white)"
+                            ? "font-semibold bg-(--bg-primary) text-(--text-white)"
                             : "hover:text-(--text-white)"}`
                     }>
                         {title}

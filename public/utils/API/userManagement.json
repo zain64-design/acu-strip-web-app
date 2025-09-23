@@ -1,0 +1,67 @@
+{
+    "userManagementData":[
+        {
+            "id":1,
+            "user":"Brooklyn Simmons",
+            "address": "2464 Royal Ln. Mesa, New Jersey 45463",
+            "number": "(907) 555-0101",
+            "company":"Barone LLC.",
+            "email":"debbie.baker@example.com",
+            "status":"activate"
+        },
+        {
+            "id":2,
+            "user":"Ralph Edwards",
+            "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+            "number": "(907) 555-0101",
+            "company":"Abstergo Ltd.",
+            "email":"debbie.baker@example.com",
+            "status":"Deactivate"
+        },
+        {
+            "id":3,
+            "user":"Eleanor Pena",
+            "address": "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+            "number": "(907) 555-0101",
+            "company":"Big Kahuna Burger Ltd.",
+            "email":"debbie.baker@example.com",
+            "status":"activate"
+        },
+        {
+            "id":4,
+            "user":"Jane Cooper",
+            "address": "4140 Parker Rd. Allentown, New Mexico 31134",
+            "number": "(907) 555-0101",
+            "company":"Binford Ltd.",
+            "email":"debbie.baker@example.com",
+            "status":"activate"
+        },
+                {
+            "id":5,
+            "user":"Brooklyn Simmons",
+            "address": "2464 Royal Ln. Mesa, New Jersey 45463",
+            "number": "(907) 555-0101",
+            "company":"Barone LLC.",
+            "email":"debbie.baker@example.com",
+            "status":"activate"
+        },
+        {
+            "id":6,
+            "user":"Ralph Edwards",
+            "address": "4517 Washington Ave. Manchester, Kentucky 39495",
+            "number": "(907) 555-0101",
+            "company":"Abstergo Ltd.",
+            "email":"debbie.baker@example.com",
+            "status":"Deactivate"
+        },
+        {
+            "id":7,
+            "user":"Eleanor Pena",
+            "address": "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+            "number": "(907) 555-0101",
+            "company":"Big Kahuna Burger Ltd.",
+            "email":"debbie.baker@example.com",
+            "status":"activate"
+        }
+    ]
+}

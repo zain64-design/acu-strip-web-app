@@ -9,7 +9,7 @@ const WebLayout = () => {
     <Header/>
     <main className='relative overflow-hidden h-[100%]'>
         <SideBar/>
-        <section className="relative overflow-hidden pt-[120px] ml-auto w-[calc(100%-58px)] xl:w-[calc(100%-312px)]">
+        <section className="relative overflow-hidden pt-[120px] ml-auto w-[calc(100%-58px)] xl:w-[calc(100%-312px)] px-6">
             <Outlet/>
         </section>
     </main>
