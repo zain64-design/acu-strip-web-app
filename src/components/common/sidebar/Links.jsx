@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import { SidebarItem } from "flowbite-react";
-import { UserIcon, DashboardIcon,EarningIcon, SettingIcon, LogOutIcon } from "./SideIcons";
+import { UserIcon, DashboardIcon,EarningIcon, SettingIcon, LogOutIcon } from "../../ui/Icons";
 import { useLocation } from "react-router";
 
 const Links = () => {

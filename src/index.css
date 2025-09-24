@@ -48,6 +48,18 @@ svg>path,svg>g>path {
 .badge {
   @apply rounded-md px-[5px] py-[4px] text-sm capitalize;
 }
+.pagination {
+  @apply flex items-center flex-wrap gap-[16px] 
+      [&>li:not(:first-child):not(:last-child)>a]:border 
+      [&>li>a]:border-(--border-gray-200) [&>li>a]:rounded-[5.5px] 
+      [&>li:not(:first-child):not(:last-child)>a]:w-7 
+      [&>li:not(:first-child):not(:last-child)>a]:h-7 
+      [&>li>a]:block [&>li>a]:content-center [&>li>a]:text-center 
+      [&>li>*]:text-(--text-gray-200) [&>li>*]:font-inter [&>li>*]:text-sm 
+      [&>li:not(:last-child)>a]:hover:text-(--text-white) [&>li:not(:first-child):not(:last-child)>a]:hover:bg-(--bg-primary) [&>li>a]:hover:border-(--border-primary) 
+      [&>li>*]:transition-all [&>li>*]:duration-200 [&>li>*]:ease-in-out 
+      [&>li>span]:capitalize;
+}
 
 }
 
@@ -92,6 +104,7 @@ svg>path,svg>g>path {
   --text-red: #FF0011;
   --text-black-10: #04091E;
   --text-black-50: #141516;
+  --text-black-100: #1C1B1F;
   --text-gray-200: #64748B;
   --text-gray-300: #747681;
   --text-gray-900:#030303;
@@ -100,6 +113,7 @@ svg>path,svg>g>path {
   --border-black: #000000;
   --border-gray-50: #D2D2D2;
   --border-gray-100: rgba(100, 116, 139, 0.5);
+  --border-gray-200: #64748B;
 
   --soft-shadow: -0.5px -0.5px #fff, 1px 1px #999999;
 

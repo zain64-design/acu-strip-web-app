@@ -3,7 +3,7 @@ import Text from '../../ui/Text'
 import Image from '../../ui/Image'
 import profileImg from '/images/user.png'
 import { Link } from 'react-router'
-import { NotificationIcon } from '../sidebar/SideIcons'
+import { NotificationIcon } from '../../ui/Icons'
 
 const Header = () => {
   return (

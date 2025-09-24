@@ -6,7 +6,7 @@ export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: process.env.NODE_ENV === 'production' ? BASE_API_PROD : BASE_API_DEV }),
     endpoints: (builder) => {
         return {
-            getUserManagementData: builder.query({
+            getAllUserData: builder.query({
                 query: (value) => {
                     return {
                         url: '/userManagement.json',
@@ -15,8 +15,12 @@ export const apiSlice = createApi({
                 },
                 transformResponse: async (data) => {
                     await new Promise((res) => setTimeout(res, 2000));
+                    // throw new Error("Custom test error: Something went wrong"); 
                     return data?.userManagementData || [];
-                }
+                },
+                validateStatus: (response, result) => {
+                    return result?.userManagementData ? true : false;
+                },
             })
         }
     }
@@ -24,4 +28,4 @@ export const apiSlice = createApi({
 
 export default apiSlice;
 
-export const { useGetUserManagementDataQuery } = apiSlice;
+export const { useGetAllUserDataQuery } = apiSlice;

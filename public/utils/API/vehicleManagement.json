@@ -1,0 +1,74 @@
+{
+    "vehicleManagementData": [
+        {
+            "id": 1,
+            "ownerName": "Brooklyn Simmons",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        },
+        {
+            "id": 2,
+            "ownerName": "Ralph Edwards",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        },
+        {
+            "id": 3,
+            "ownerName": "Eleanor Pena",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        },
+        {
+            "id": 4,
+            "ownerName": "Jane Cooper",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        },
+        {
+            "id": 5,
+            "ownerName": "Brooklyn Simmons",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        },
+        {
+            "id": 6,
+            "ownerName": "Ralph Edwards",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        },
+        {
+            "id": 7,
+            "ownerName": "Eleanor Pena",
+            "vehicleModel": "Legend",
+            "vehicleMake": "ACURA",
+            "vinNo": "JH4KA3250JC001616",
+            "year": "1998",
+            "currentMileage": "5250 mi",
+            "lastTest": "15 Feb 2025"
+        }
+    ]
+}
