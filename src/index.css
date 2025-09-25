@@ -4,7 +4,7 @@
 @source "../.flowbite-react/class-list.json";
 
 body {
-  @apply overflow-x-hidden bg-(--bg-secondary) h-[100%] box-border;
+  @apply overflow-x-hidden bg-(--bg-secondary) h-[100%] box-border scroll-smooth;
 }
 svg>path,svg>g>path {
   @apply transition-all duration-300 ease-in-out;
