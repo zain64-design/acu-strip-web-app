@@ -6,7 +6,7 @@ import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
 import CustomBtn from "../../ui/CustomBtn";
 
 
-const SignInForm = () => {
+const LogInForm = () => {
 
     const navigate = useNavigate('');
 
@@ -62,4 +62,4 @@ const SignInForm = () => {
     )
 }
 
-export default SignInForm
+export default LogInForm

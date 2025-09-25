@@ -2,7 +2,7 @@ import loginBG from '/images/login-bg.webp'
 import logo from '/images/login-logo.svg'
 import Image from '../components/ui/Image'
 import Text from '../components/ui/Text'
-import SignInForm from '../components/common/auth/SignInForm'
+import LogInForm from '../components/common/auth/LogInForm'
 
 const SignIn = () => {
   return (
@@ -19,7 +19,7 @@ const SignIn = () => {
                 <Text as='h5' className='font-urbanist font-bold text-2xl sm:text-4xl text-(--text-white) capitalize text-center leading-[30px] tracking-[-0.1px] mb-2 sm:mb-4'>Welcome Back</Text>
                 <Text as='p' className='login-form-para'>Please enter your credentials to continue</Text>
                 <div className="mt-5 sm:mt-[38px]">
-                  <SignInForm />
+                  <LogInForm />
                 </div>
               </div>
             </div>
