@@ -1,8 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router'
+import Text from '../../ui/Text'
+import { ChevronSharpIcon, LockIcon, NoteBookIcon, QuestionIcon, ShieldCheckIcon, ShieldLockIcon, UserEditIcon } from '../../ui/Icons'
 
 const UserOptions = () => {
+
+  const userNavigation = [
+    { id:1,name:'Edit Profile', route: '/',icon:<UserEditIcon/> },
+    { id:2,name:'Change Password', route: '/',icon: <ShieldCheckIcon/> },
+    { id:3,name:'About App', route: '/', icon:<NoteBookIcon/> },
+    { id:4,name:'Privacy Policy', route: '/', icon: <LockIcon/> },
+    { id:5,name:'FAQs', route: '/', icon: <QuestionIcon/> },
+    { id:6,name:'Terms & Conditions', route: '/', icon: <ShieldLockIcon/> },
+  ]
+
   return (
-    <></>
+    <>
+    <Text as='ul' className='[&>li:not(:last-child)]:pb-[35px] mt-[9px]'>
+      {userNavigation.map(({id,name,route,icon})=> (
+        <li key={id}>
+          <Link to={route} className='w-full flex gap-[19px] flex-row flex-start items-center font-inter font-normal text-base md:text-lg text-(--text-black) cursor-pointer hover:text-(--text-primary) transition duration-300 ease-in-out'>
+          {icon}
+          <Text as='span'>{name}</Text>
+          <ChevronSharpIcon className='ml-auto'/></Link>
+        </li>
+      ))}
+    </Text>
+    </>
   )
 }
 
