@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import CustomInput from '../../ui/CustomInput'
 import { Link, useNavigate } from "react-router";
 import Text from "../../ui/Text";
@@ -15,29 +14,15 @@ const SignInForm = () => {
         navigate('/dashboard');
     }
 
-    // const [formData, setFormData] = useState({ email: "", password: "" });
     const { isPasswordVisible, passwordToggle } = usePasswordToggle()
-
-    // const handleChange = (e) => {
-    //     setFormData({ ...formData, [e.target.name]: e.target.value });
-    // };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log("Form submitted:", formData);
-    // };
     return (
         <>
-            <form
-            // onSubmit={handleSubmit}
-            >
+            <form>
                 <div className=""></div>
                 <CustomInput
                     label="Email"
                     type="email"
                     name="email"
-                    // value={formData.email}
-                    // onChange={handleChange}
                     placeholder="Enter your email"
                     wrapperClassName='mb-3 sm:mb-6'
                     labelClassName="font-urbanist font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4"
@@ -48,8 +33,6 @@ const SignInForm = () => {
                     label="Password"
                     type={isPasswordVisible['password1'] ? 'text' : 'password'}
                     name="password"
-                    // value={formData.password}
-                    // onChange={handleChange}
                     placeholder="Enter your password"
                     wrapperClassName='mb-3 sm:mb-6 relative'
                     labelClassName="font-urbanist font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4"
