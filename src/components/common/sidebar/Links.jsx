@@ -1,7 +1,5 @@
 import { NavLink } from "react-router";
-import { SidebarItem } from "flowbite-react";
-import { UserIcon, DashboardIcon,EarningIcon, SettingIcon, LogOutIcon } from "../../ui/Icons";
-import { useLocation } from "react-router";
+import { UserIcon, DashboardIcon, EarningIcon, SettingIcon, LogOutIcon } from "../../ui/Icons";
 
 const Links = () => {
 
@@ -44,31 +42,35 @@ const Links = () => {
         }
     ];
 
-    const location = useLocation();
-
 
     return (
         <>
-            {routes?.map(({ id, path, title, icon: Icon }) => {
-                const isActive = location.pathname === path;
-                return (
-                    <SidebarItem key={id} as={NavLink} to={path} icon={() => (
-                        <Icon
-                            className={
-                                isActive
-                                    ? "text-(--text-white)"
-                                    : "text-(--text-primary) group-hover:text-(--text-white)"
-                            }
-                        />
-                    )} className={
-                        `group ${isActive
-                            ? "font-semibold bg-(--bg-primary) text-(--text-white)"
-                            : "hover:text-(--text-white)"}`
-                    }>
-                        {title}
-                    </SidebarItem>
-                )
-            })}
+            {routes.map(({ id, path, title, icon: Icon }) => (
+                <li key={id}>
+                    <NavLink
+                        to={path}
+                        className={({ isActive }) =>
+                            `sideLinks group ${isActive
+                                ? "font-semibold bg-(--bg-primary) text-(--text-white)"
+                                : "hover:text-(--text-white)"
+                            }`
+                        }
+                    >
+                        {({ isActive }) => (
+                            <>
+                                <Icon
+                                    className={
+                                        isActive
+                                            ? "text-(--text-white)"
+                                            : "text-(--text-primary) group-hover:text-(--text-white)"
+                                    }
+                                />
+                                {title}
+                            </>
+                        )}
+                    </NavLink>
+                </li>
+            ))}
         </>
     )
 }

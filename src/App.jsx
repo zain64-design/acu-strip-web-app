@@ -11,6 +11,9 @@ import VehicleManagement from "./pages/VehicleManagement"
 import EarningManagement from "./pages/EarningManagement"
 import Settings from "./pages/Settings"
 import Providers from "./redux/Providers"
+import About from "./pages/About"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsCondition from "./pages/TermsCondition"
 
 
 function App() {
@@ -27,7 +30,12 @@ function App() {
             <Route path='/user-management' element={<UserManagement/>} />
             <Route path='/vehicle-management' element={<VehicleManagement/>} />
             <Route path='/earnings-management' element={<EarningManagement/>} />
-            <Route path='/settings' element={<Settings/>} />
+            <Route path='/settings'>
+              <Route index element={<Settings/>}/>
+              <Route path='about' element={<About/>} />
+              <Route path='privacy' element={<PrivacyPolicy/>} />
+              <Route path='terms-conditions' element={<TermsCondition/>} />
+            </Route>
           </Route>
           <Route element={<AuthLayout />}>
             <Route path='/' index element={<LogIn />} />

@@ -2,17 +2,19 @@ import React from 'react'
 import { Outlet } from 'react-router'
 import Header from '../header/Header'
 import SideBar from '../sidebar/SideBar'
+import useDrawerToggle from '../../../hooks/useDrawerToggle'
 
 const WebLayout = () => {
+  const { isOpen: isMenuOpen, openDrawer: openMenuDrawer, closeDrawer: closeMenuDrawer } = useDrawerToggle();
   return (
     <>
-    <Header/>
-    <main className='relative overflow-hidden h-[100%]'>
-        <SideBar/>
-        <section className="relative overflow-hidden pt-[120px] ml-auto w-[calc(100%-58px)] xl:w-[calc(100%-312px)] px-6">
-            <Outlet/>
+      <Header isMenuOpen={isMenuOpen} openMenuDrawer={openMenuDrawer} closeMenuDrawer={closeMenuDrawer}  />
+      <main className='relative overflow-hidden h-[100%]'>
+        <SideBar isMenuOpen={isMenuOpen} closeMenuDrawer={closeMenuDrawer} />
+        <section className="relative overflow-hidden pt-[120px] ml-auto w-full xl:w-[calc(100%-312px)] px-6">
+          <Outlet />
         </section>
-    </main>
+      </main>
     </>
   )
 }

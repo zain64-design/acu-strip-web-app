@@ -49,7 +49,7 @@ const FlowBiteTheme = createTheme({
             }
         },
         "item": {
-            "base": "flex items-center justify-center rounded-xl px-[23px] py-4 font-outfit capitalize text-base font-normal text-(--text-gray-900) hover:bg-(--bg-primary) hover:text-(--text-white) dark:text-white dark:hover:bg-gray-700 transition-all duration-300 ease-in-out",
+            "base": "flex items-center justify-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700",
             "active": "bg-gray-100 dark:bg-gray-700",
             "collapsed": {
                 "insideCollapse": "group w-full pl-8 transition duration-75",
@@ -148,6 +148,47 @@ button:{
     "red": "border border-red-700 text-red-700 hover:border-red-800 hover:bg-red-800 hover:text-white focus:ring-red-300 dark:border-red-600 dark:text-red-500 dark:hover:border-red-700 dark:hover:bg-red-700 dark:hover:text-white dark:focus:ring-red-800",
     "teal": "border border-teal-700 text-teal-700 hover:border-teal-800 hover:bg-teal-800 hover:text-white focus:ring-teal-300 dark:border-teal-600 dark:text-teal-400 dark:hover:border-teal-700 dark:hover:bg-teal-700 dark:hover:text-white dark:focus:ring-teal-800",
     "yellow": "border border-yellow-400 text-yellow-400 hover:border-yellow-500 hover:bg-yellow-500 hover:text-white focus:ring-yellow-300 dark:border-yellow-300 dark:text-yellow-300 dark:hover:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-white dark:focus:ring-yellow-900"
+  }
+},
+drawer:{
+  "root": {
+    "base": "fixed z-40 overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800",
+    "backdrop": "fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80",
+    "edge": "bottom-16",
+    "position": {
+      "top": {
+        "on": "left-0 right-0 top-0 w-full transform-none",
+        "off": "left-0 right-0 top-0 w-full -translate-y-full"
+      },
+      "right": {
+        "on": "right-0 top-0 h-screen w-80 transform-none",
+        "off": "right-0 top-0 h-screen w-80 translate-x-full"
+      },
+      "bottom": {
+        "on": "bottom-0 left-0 right-0 w-full transform-none",
+        "off": "bottom-0 left-0 right-0 w-full translate-y-full"
+      },
+      "left": {
+        "on": "left-0 top-0 h-screen w-full sm:w-80 transform-none",
+        "off": "left-0 top-0 h-screen w-full sm:w-80 -translate-x-full"
+      }
+    }
+  },
+  "header": {
+    "inner": {
+      "closeButton": "absolute end-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white",
+      "closeIcon": "h-4 w-4",
+      "titleCloseIcon": "sr-only",
+      "titleIcon": "me-2.5 h-4 w-4",
+      "titleText": "mb-4 inline-flex items-center text-base font-semibold text-gray-500 dark:text-gray-400"
+    },
+    "collapsed": {
+      "on": "hidden",
+      "off": "block"
+    }
+  },
+  "items": {
+    "base": ""
   }
 }
 })

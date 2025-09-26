@@ -61,8 +61,16 @@ svg>path,svg>g>path {
       [&>li>span]:capitalize;
 }
 
+.sideLinks {
+  @apply flex items-center justify-start rounded-xl gap-2 px-[23px] py-4 font-outfit capitalize text-base font-normal text-(--text-gray-900) hover:bg-(--bg-primary) hover:text-(--text-white) transition-all duration-300 ease-in-out
+}
+
 .img-fluid {
   @apply max-w-full h-auto;
+}
+
+.flex-row-wrap {
+  @apply flex flex-row flex-wrap;
 }
 
 }
@@ -109,6 +117,7 @@ svg>path,svg>g>path {
   --text-black-10: #04091E;
   --text-black-50: #141516;
   --text-black-100: #1C1B1F;
+    --text-black-200: #1F1F1F;
   --text-gray-200: #64748B;
   --text-gray-300: #747681;
   --text-gray-900:#030303;
