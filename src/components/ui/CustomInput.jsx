@@ -1,4 +1,5 @@
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 const CustomInput = ({
     label,
@@ -18,7 +19,7 @@ const CustomInput = ({
         <>
             <div className={`flex flex-col ${wrapperClassName}`}>
                 {label && (
-                    <label htmlFor={name} value={label} className={`${labelClassName}`}>{label}</label>
+                    <label htmlFor={name} value={label} className={twMerge(labelClassName)}>{label}</label>
                 )}
 
                 <input
@@ -30,7 +31,7 @@ const CustomInput = ({
                     onChange={onChange}
                     placeholder={placeholder}
                     required={required}
-                    className={inputClassName}
+                    className={twMerge(inputClassName)}
                 />
                 {iconToggler && (
                     <>

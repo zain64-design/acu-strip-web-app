@@ -14,36 +14,44 @@ import Providers from "./redux/Providers"
 import About from "./pages/About"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsCondition from "./pages/TermsCondition"
+import Edit from "./pages/Edit"
+import EditProfile from "./pages/EditProfile"
+import ChangePassword from "./pages/ChangePassword"
+import FAQ from "./pages/FAQ"
 
 
 function App() {
 
   return (
     <>
-    <ThemeProvider theme={FlowBiteTheme}>
       <Providers>
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<NotFound />} />
-          <Route element={<WebLayout />}>
-            <Route path='/dashboard' index element={<Dashboard />} />
-            <Route path='/user-management' element={<UserManagement/>} />
-            <Route path='/vehicle-management' element={<VehicleManagement/>} />
-            <Route path='/earnings-management' element={<EarningManagement/>} />
-            <Route path='/settings'>
-              <Route index element={<Settings/>}/>
-              <Route path='about' element={<About/>} />
-              <Route path='privacy' element={<PrivacyPolicy/>} />
-              <Route path='terms-conditions' element={<TermsCondition/>} />
-            </Route>
-          </Route>
-          <Route element={<AuthLayout />}>
-            <Route path='/' index element={<LogIn />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+        <ThemeProvider theme={FlowBiteTheme}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="*" element={<NotFound />} />
+                <Route element={<WebLayout />}>
+                  <Route path='/dashboard' index element={<Dashboard />} />
+                  <Route path='/user-management' element={<UserManagement />} />
+                  <Route path='/vehicle-management' element={<VehicleManagement />} />
+                  <Route path='/earnings-management' element={<EarningManagement />} />
+                  <Route path='/settings'>
+                    <Route index element={<Settings />} />
+                    <Route path='edit-profile' element={<EditProfile />} />
+                    <Route path='change-password' element={<ChangePassword />} />
+                    <Route path='about' element={<About />} />
+                    <Route path='privacy' element={<PrivacyPolicy />} />
+                    <Route path='faq' element={<FAQ />} />
+                    <Route path='terms-conditions' element={<TermsCondition />} />
+                    <Route path='edit' element={<Edit />} />
+                  </Route>
+                </Route>
+                <Route element={<AuthLayout />}>
+                  <Route path='/' index element={<LogIn />} />
+                </Route>
+              </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
       </Providers>
-      </ThemeProvider>
     </>
   )
 }

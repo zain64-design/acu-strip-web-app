@@ -25,8 +25,8 @@ const LogInForm = () => {
                     name="email"
                     placeholder="Enter your email"
                     wrapperClassName='mb-3 sm:mb-6'
-                    labelClassName="font-urbanist font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4"
-                    inputClassName="h-[62px] w-full p-[19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] border-(--border-gray-50) rounded-xl font-urbanist text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize"
+                    labelClassName="font-urbanist font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4 capitalize"
+                    inputClassName="h-[62px] w-full p-[19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] rounded-xl font-urbanist text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize"
                     required
                 />
                 <CustomInput
@@ -35,7 +35,7 @@ const LogInForm = () => {
                     name="password"
                     placeholder="Enter your password"
                     wrapperClassName='mb-3 sm:mb-6 relative'
-                    labelClassName="font-urbanist font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4"
+                    labelClassName="pass-type-font font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4 capitalize"
                     inputClassName="h-[62px] w-full p-[19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] border-(--border-gray-50) rounded-xl font-inter text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize placeholder:font-urbanist"
                     required
                     iconToggler={

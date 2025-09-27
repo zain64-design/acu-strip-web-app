@@ -4,7 +4,7 @@ import DescArea from '../components/common/settings/DescArea'
 const About = () => {
   return (
     <>
-    <InnerBannerTitle title='About'/>
+    <InnerBannerTitle wrapperClass='mt-5 flex items-start gap-[24px]' smTitle='About'/>
     <DescArea/>
     </>
   )

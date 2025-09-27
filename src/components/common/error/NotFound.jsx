@@ -5,7 +5,7 @@ import ErrorDesc from './ErrorDesc';
 const NotFound = () => {
     return (
         <>
-            <ErrorDesc heading="404 - Page Not Found" para="The requested page does not exist" icon={<MdError className='text-(--text-red-600) text-2xl md:text-6xl mx-auto' />} />
+            <ErrorDesc heading="404 - Page Not Found" para="The requested page does not exist" icon={<MdError className='text-(--text-primary) text-2xl md:text-6xl mx-auto' />} />
         </>
     )
 }

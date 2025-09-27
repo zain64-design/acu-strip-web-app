@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button,Spinner } from 'flowbite-react'
 import PropTypes from 'prop-types';
+import { twMerge } from 'tailwind-merge'
 
 const CustomBtn = (
     {
@@ -19,7 +20,7 @@ const CustomBtn = (
             type={type}
             onClick={onClick}
             disabled={disabled || isLoading}
-            className={`${buttonClass}`}
+            className={twMerge(buttonClass)}
             size={size}>
             {isLoading ? (
                 <>
@@ -42,7 +43,7 @@ CustomBtn.PropTypes = {
     disabled: PropTypes.bool,
     label: PropTypes.string.isRequired,
     icon: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
-    className: PropTypes.string,
+    buttonClass: PropTypes.string,
     isLoading: PropTypes.bool,
     size: PropTypes.oneOf(['sm', 'md', 'lg'])
 };

@@ -6,11 +6,11 @@ import { ChevronSharpIcon, LockIcon, NoteBookIcon, QuestionIcon, ShieldCheckIcon
 const UserOptions = () => {
 
   const userNavigation = [
-    { id:1,name:'Edit Profile', route: '/',icon:<UserEditIcon/> },
-    { id:2,name:'Change Password', route: '/',icon: <ShieldCheckIcon/> },
+    { id:1,name:'Edit Profile', route: '/settings/edit-profile',icon:<UserEditIcon/> },
+    { id:2,name:'Change Password', route: '/settings/change-password',icon: <ShieldCheckIcon/> },
     { id:3,name:'About App', route: '/settings/about', icon:<NoteBookIcon/> },
     { id:4,name:'Privacy Policy', route: '/settings/privacy', icon: <LockIcon/> },
-    { id:5,name:'FAQs', route: '/', icon: <QuestionIcon/> },
+    { id:5,name:'FAQs', route: '/settings/faq', icon: <QuestionIcon/> },
     { id:6,name:'Terms & Conditions', route: '/settings/terms-conditions', icon: <ShieldLockIcon/> },
   ]
 

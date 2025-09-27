@@ -4,8 +4,8 @@ import DescArea from '../components/common/settings/DescArea'
 const TermsCondition = () => {
   return (
     <>
-        <InnerBannerTitle title='Terms & Conditions'/>
-    <DescArea/>
+      <InnerBannerTitle wrapperClass='mt-5 flex items-start gap-[24px]' smTitle='Terms & Conditions' />
+      <DescArea />
     </>
   )
 }
