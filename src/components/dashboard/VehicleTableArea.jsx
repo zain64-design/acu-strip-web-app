@@ -1,6 +1,5 @@
 import React from 'react'
-import { TableCell, TableRow, Dropdown, DropdownItem } from 'flowbite-react'
-import { BiDotsVerticalRounded } from "react-icons/bi";
+import { TableCell, TableRow } from 'flowbite-react'
 import CustomTable from '../ui/CustomTable';
 import Text from '../ui/Text';
 import { Link } from 'react-router';
