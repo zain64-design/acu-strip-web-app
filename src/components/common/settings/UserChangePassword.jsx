@@ -17,12 +17,13 @@ const UserChangePassword = () => {
                         placeholder="type current password"
                         wrapperClassName='relative'
                         labelClassName="font-urbanist font-bold text-base text-(--text-black) mb-[16px] capitalize"
-                        inputClassName="h-[62px] w-full p-[17px_24px] bg-(--bg-grey-50) rounded-lg text-lg text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-100) placeholder:capitalize placeholder:font-urbanist pass-type-font"
+                        inputClassName="h-[62px] w-full p-[10px_40px_10px_10px] sm:p-[17px_40px_17px_24px] bg-(--bg-grey-50) rounded-lg text-sm sm:text-lg text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-100) placeholder:capitalize placeholder:font-urbanist pass-type-font placeholder:text-sm sm:placeholder:text-lg"
                         required
+                        autoComplete="current-password"
                         iconToggler={
                             <CustomBtn
                                 type="button"
-                                buttonClass="absolute bottom-[18px] right-0 inline-block text-(--text-gray-100) bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 px-[19px] hover:bg-transparent cursor-pointer"
+                                buttonClass="absolute bottom-[18px] right-0 inline-block text-(--text-gray-100) bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 pr-[10px] sm:pr-[15px] hover:bg-transparent cursor-pointer"
                                 onClick={() => passwordToggle('password1')}
                                 icon={isPasswordVisible['password1'] ? <PiEyeLight /> : <PiEyeSlash />}
                             />
@@ -36,12 +37,13 @@ const UserChangePassword = () => {
                         placeholder="type new password"
                         wrapperClassName='relative'
                         labelClassName="font-urbanist font-bold text-base text-(--text-black) mb-[16px] capitalize"
-                        inputClassName="h-[62px] w-full p-[17px_24px] bg-(--bg-grey-50) rounded-lg text-lg text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-100) placeholder:capitalize placeholder:font-urbanist pass-type-font"
+                        inputClassName="h-[62px] w-full p-[10px_40px_10px_10px] sm:p-[17px_40px_17px_24px] bg-(--bg-grey-50) rounded-lg text-sm sm:text-lg text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-100) placeholder:capitalize placeholder:font-urbanist pass-type-font placeholder:text-sm sm:placeholder:text-lg"
                         required
+                        autoComplete="new-password"
                         iconToggler={
                             <CustomBtn
                                 type="button"
-                                buttonClass="absolute bottom-[18px] right-0 inline-block text-(--text-gray-100) bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 px-[19px] hover:bg-transparent cursor-pointer"
+                                buttonClass="absolute bottom-[18px] right-0 inline-block text-(--text-gray-100) bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 pr-[10px] sm:pr-[15px] hover:bg-transparent cursor-pointer"
                                 onClick={() => passwordToggle('password2')}
                                 icon={isPasswordVisible['password2'] ? <PiEyeLight /> : <PiEyeSlash />}
                             />
@@ -55,12 +57,13 @@ const UserChangePassword = () => {
                         placeholder="type confirm password"
                         wrapperClassName='relative'
                         labelClassName="font-urbanist font-bold text-base text-(--text-black) mb-[16px] capitalize"
-                        inputClassName="h-[62px] w-full p-[17px_24px] bg-(--bg-grey-50) rounded-lg text-lg text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-100) placeholder:capitalize placeholder:font-urbanist pass-type-font"
+                        inputClassName="h-[62px] w-full p-[10px_40px_10px_10px] sm:p-[17px_40px_17px_24px] bg-(--bg-grey-50) rounded-lg text-sm sm:text-lg text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-100) placeholder:capitalize placeholder:font-urbanist pass-type-font placeholder:text-sm sm:placeholder:text-lg"
                         required
+                        autoComplete="new-password"
                         iconToggler={
                             <CustomBtn
                                 type="button"
-                                buttonClass="absolute bottom-[18px] right-0 inline-block text-(--text-gray-100) bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 px-[19px] hover:bg-transparent cursor-pointer"
+                                buttonClass="absolute bottom-[18px] right-0 inline-block text-(--text-gray-100) bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 pr-[10px] sm:pr-[15px] hover:bg-transparent cursor-pointer"
                                 onClick={() => passwordToggle('password3')}
                                 icon={isPasswordVisible['password3'] ? <PiEyeLight /> : <PiEyeSlash />}
                             />
@@ -68,7 +71,7 @@ const UserChangePassword = () => {
                         }
                     />
                 </div>
-                <CustomBtn buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[178px] w-full h-[45px] md:h-[71px]' label='save changes' />
+                <CustomBtn buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[178px] w-full h-[60px] md:h-[71px]' label='save changes' />
             </form>
         </>
     )

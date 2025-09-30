@@ -5,7 +5,7 @@ const EditProfile = () => {
     return (
         <>
             <div className="card p-[20px_15px] md:p-[56px_34px_24px] mb-10">
-                <InnerBannerTitle lgTitle='Edit Profile' lgTitleClass='mx-auto text-center' arrowBtnClass='absolute top-0 left-auto' wrapperClass='relative lg:pl-[23px] mb-[44px]' />
+                <InnerBannerTitle lgTitle='Edit Profile' lgTitleClass='mx-auto text-center' arrowBtnClass='xs:absolute top-0 left-auto' wrapperClass='relative lg:pl-[23px] mb-[44px] flex items-start xs:block' />
                 <UserEditProfile/>
             </div>
         </>

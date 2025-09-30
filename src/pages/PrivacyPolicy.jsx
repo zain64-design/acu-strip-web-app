@@ -5,7 +5,7 @@ import DescArea from '../components/common/settings/DescArea'
 const PrivacyPolicy = () => {
   return (
     <>
-      <InnerBannerTitle wrapperClass='mt-5 flex items-start gap-[24px]' smTitle='Privacy Policy' />
+      <InnerBannerTitle wrapperClass='mt-5 flex items-start gap-[10px] sm:gap-[24px] flex-wrap' smTitle='Privacy Policy' isEdit={true} />
       <DescArea />
     </>
   )

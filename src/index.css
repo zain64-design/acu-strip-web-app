@@ -23,11 +23,9 @@ svg>path,svg>g>path {
 }
 
 @layer components {
-
     .btn-primary {
       @apply !bg-(--btn-bg-primary) !text-(--btn-text-white) capitalize rounded-lg border border-(--border-primary) transition duration-500 ease-in-out cursor-pointer hover:!bg-(--btn-bg-hover) hover:!text-(--btn-text-green) p-2;
   }
-
   .login-form-para {
    @apply font-urbanist font-light text-base sm:text-lg text-(--text-white) text-center leading-[24px] sm:leading-[26px] tracking-[-0.04px];
   }
@@ -35,19 +33,15 @@ svg>path,svg>g>path {
   @apply content-[''] absolute top-0 left-[-25px] bottom-0 h-full z-[-1] 
          backdrop-blur-[6px] [width:calc(100%-50%)] [transform:skewX(355deg)];
 }
-
 .form-bg::after {
   @apply content-[''] absolute inset-0 h-full z-[-1] bg-[linear-gradient(201deg,rgba(0,0,0,1)20%,rgba(0,0,0,0.5)60%,rgba(0,0,0,1)80%)] backdrop-blur-[4px];
 }
-
 .card {
   @apply bg-(--bg-white) rounded-2xl;
 }
-
 .card-heading {
   @apply font-urbanist font-bold text-lg sm:text-[22px] text-(--text-black-10) leading-normal capitalize;
 }
-
 .badge {
   @apply rounded-md px-[5px] py-[4px] text-sm capitalize;
 }
@@ -63,40 +57,24 @@ svg>path,svg>g>path {
       [&>li>*]:transition-all [&>li>*]:duration-200 [&>li>*]:ease-in-out 
       [&>li>span]:capitalize;
 }
-
 .sideLinks {
   @apply flex items-center justify-start rounded-xl gap-2 px-[23px] py-4 font-outfit capitalize text-base font-normal text-(--text-gray-900) hover:bg-(--bg-primary) hover:text-(--text-white) transition-all duration-300 ease-in-out
 }
-
 .img-fluid {
   @apply max-w-full h-auto;
 }
-
 .flex-row-wrap {
   @apply flex flex-row flex-wrap;
 }
-
   .pass-type-font[type='password'] {
   @apply font-nunito;
 }
-
   .pass-type-font[type='text'] {
   @apply font-urbanist;
 }
-
-/* .ct-icon .p-accordion-header-link {
-  @apply flex-row-reverse !border-(--border-gray-300) !border-b-0 !bg-(--bg-white) !rounded-[10px_10px_0px_0px]; 
-} */
- /* .ct-icon .p-accordion-header-link {
-  @apply flex-row-reverse !border-0 !bg-(--bg-white) !rounded-[10px_10px_0px_0px]; 
-}
-.ct-content .p-accordion-content {
-  @apply !border-(--border-gray-300) !rounded-[0px_0px_10px_10px];
-} */
  .accord-ct-border .p-accordion-tab {
   @apply border !border-(--border-gray-300) !rounded-[10px] overflow-hidden !mb-4;
  }
-
  .accord-ct-icon .p-accordion-header-link {
   @apply flex-row-reverse !border-0 !bg-(--bg-white) !p-3 h-[66px]; 
 }
@@ -106,6 +84,12 @@ svg>path,svg>g>path {
 .accord-ct-content .p-accordion-content {
   @apply !border-(--border-gray-300) !border-0 !p-[0_15px_15px];
 }
+.ct-editor .ql-toolbar {
+  @apply rounded-[11px_11px_0_0];
+}
+.ct-editor .ql-container {
+  @apply !rounded-[0_0_11px_11px];
+}
 
 }
 
@@ -113,6 +97,7 @@ svg>path,svg>g>path {
 
 @theme {
   /* --breakpoint-*: initial; */
+  --breakpoint-xs: 410px;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
@@ -139,6 +124,7 @@ svg>path,svg>g>path {
   --bg-white-50: #FDFDFD;
   --bg-black: #000000;
   --bg-grey-50: #E8E8E8;
+  --bg-red-50:#E34234;
 
     --bg-success: rgba(30, 145, 25, 0.20);
     --bg-warning: rgba(255, 0, 17, 0.20);

@@ -23,7 +23,7 @@ const Header = ({ openMenuDrawer }) => {
           </div>
         </div>
         <div className="flex-row-wrap gap-3 sm:gap-6">
-          <Link to=''><NotificationIcon /></Link>
+          <Link to='/notification' className="relative before:content-[attr(data-value)] before:block before:h-[12px] before:w-[12px] before:rounded-full before:bg-(--bg-red-50) before:text-[0px] before:absolute before:right-[-5px] before:border-2 before:border-(--border-white)" data-value='1'><NotificationIcon /></Link>
           <CustomBtn onClick={openMenuDrawer} buttonClass="bg-transparent dark:bg-transparent text-2xl text-(--text-primary) cursor-pointer block xl:hidden hover:bg-transparent focus:ring-transparent dark:focus:ring-transparent" icon={<HiMiniBars3BottomRight />} />
         </div>
       </div>

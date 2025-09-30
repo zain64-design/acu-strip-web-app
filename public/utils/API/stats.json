@@ -1,0 +1,22 @@
+{
+    "statsData":[
+        {
+            "id":1,
+            "title": "total users",
+            "total": "2156",
+            "icon": "/images/stat1.png"
+        },
+        {
+            "id":2,
+            "title": "active vehicles",
+            "total": "32",
+            "icon": "/images/stat2.png"
+        },
+        {
+            "id":3,
+            "title": "total earning",
+            "total": "$12,000,000",
+            "icon": "/images/stat3.png"
+        }
+    ]
+}

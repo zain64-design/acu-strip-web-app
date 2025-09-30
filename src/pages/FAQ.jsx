@@ -5,7 +5,7 @@ import FaqArea from '../components/common/settings/FaqArea'
 const FAQ = () => {
   return (
     <>
-        <InnerBannerTitle wrapperClass='mt-5 flex items-start gap-[24px]' smTitle='FAQs'/>
+        <InnerBannerTitle wrapperClass='mt-5 flex items-start gap-[10px] sm:gap-[24px] flex-wrap' smTitle='FAQs' isEdit={true}/>
         <FaqArea/> 
     </>
   )

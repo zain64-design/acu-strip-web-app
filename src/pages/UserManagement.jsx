@@ -47,7 +47,7 @@ const UserManagement = () => {
       <div className="card py-[25px] mb-10">
         <Text className="card-heading px-[24px]">User Management</Text>
         <SearchBar formClass='flex items-center flex-wrap md:flex-nowrap w-full gap-[17px] mt-5 mb-[59px] px-[24px]' searchClass="flex w-full md:w-[calc(100%-218px)]" placeholder='Search user' name='search' btnLabel='search' />
-        <CustomTable tbHeader={tbHeader} data={data} isLoading={isLoading} error={error} renderRow={renderRow} tbClass='mt-4' />
+        <CustomTable tbHeader={tbHeader} data={data} isLoading={isLoading} error={error} renderRow={renderRow} tbWrapperClass='mt-4' />
         <Paginations
         totalPages={6}
         currentPage={page}

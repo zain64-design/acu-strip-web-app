@@ -14,10 +14,11 @@ import Providers from "./redux/Providers"
 import About from "./pages/About"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsCondition from "./pages/TermsCondition"
-import Edit from "./pages/Edit"
+import EditDesc from "./pages/EditDesc"
 import EditProfile from "./pages/EditProfile"
 import ChangePassword from "./pages/ChangePassword"
 import FAQ from "./pages/FAQ"
+import Notification from "./pages/Notification"
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                   <Route path='/user-management' element={<UserManagement />} />
                   <Route path='/vehicle-management' element={<VehicleManagement />} />
                   <Route path='/earnings-management' element={<EarningManagement />} />
+                  <Route path='/notification' element={<Notification/>} />
                   <Route path='/settings'>
                     <Route index element={<Settings />} />
                     <Route path='edit-profile' element={<EditProfile />} />
@@ -42,7 +44,7 @@ function App() {
                     <Route path='privacy' element={<PrivacyPolicy />} />
                     <Route path='faq' element={<FAQ />} />
                     <Route path='terms-conditions' element={<TermsCondition />} />
-                    <Route path='edit' element={<Edit />} />
+                    <Route path='edit' element={<EditDesc />} />
                   </Route>
                 </Route>
                 <Route element={<AuthLayout />}>

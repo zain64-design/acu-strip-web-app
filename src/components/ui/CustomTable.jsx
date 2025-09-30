@@ -1,17 +1,18 @@
 import React from 'react'
 import { Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from 'flowbite-react'
 import Text from './Text'
+import { twMerge } from 'tailwind-merge'
 
 
-const CustomTable = ({ tbHeader = [], tbClass = '', data = [], isLoading = false, error = false, renderRow }) => {
+const CustomTable = ({ tbHeader = [], tbClass='', tbHeadClass='', tbHeadCellClass='' , tbWrapperClass = '', data = [], isLoading = false, error = false, renderRow }) => {
   return (
     <>
-      <div className={`overflow-x-auto ${tbClass}`}>
-        <Table className='ct-table table-borderless align-middle'>
-          <TableHead className='border-b border-(--border-gray-100)'>
+      <div className={twMerge('overflow-x-auto', tbWrapperClass)}>
+        <Table className={twMerge('align-middle', tbClass)}>
+          <TableHead className={twMerge('border-b border-(--border-gray-100)', tbHeadClass)}>
             <TableRow>
               {tbHeader?.map((header, index) => (
-                <TableHeadCell className='px-5 bg-(--bg-white) font-inter font-bold text-[14.98px] text-(--text-black-50) capitalize' key={index} colSpan={header.colspan && header.colspan}>{header.text}</TableHeadCell>
+                <TableHeadCell className={twMerge('px-5 bg-(--bg-white) font-inter font-bold text-[14.98px] text-(--text-black-50) capitalize',tbHeadCellClass)} key={index} colSpan={header.colspan && header.colspan}>{header.text}</TableHeadCell>
               ))}
             </TableRow>
           </TableHead>

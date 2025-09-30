@@ -8,6 +8,7 @@ const CustomInput = ({
     value,
     onChange,
     defaultValue,
+    autoComplete,
     placeholder = "",
     required = false,
     wrapperClassName = "",
@@ -32,6 +33,7 @@ const CustomInput = ({
                     placeholder={placeholder}
                     required={required}
                     className={twMerge(inputClassName)}
+                    autoComplete={autoComplete}
                 />
                 {iconToggler && (
                     <>

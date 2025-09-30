@@ -26,7 +26,7 @@ const LogInForm = () => {
                     placeholder="Enter your email"
                     wrapperClassName='mb-3 sm:mb-6'
                     labelClassName="font-urbanist font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4 capitalize"
-                    inputClassName="h-[62px] w-full p-[19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] rounded-xl font-urbanist text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize"
+                    inputClassName="h-[62px] w-full p-[10px] sm:p-[19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] rounded-xl font-urbanist text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize"
                     required
                 />
                 <CustomInput
@@ -36,12 +36,12 @@ const LogInForm = () => {
                     placeholder="Enter your password"
                     wrapperClassName='mb-3 sm:mb-6 relative'
                     labelClassName="pass-type-font font-semibold text-base sm:text-lg text-(--text-white) tracking-[0.8%] mb-2 sm:mb-4 capitalize"
-                    inputClassName="h-[62px] w-full p-[19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] border-(--border-gray-50) rounded-xl font-inter text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize placeholder:font-urbanist"
+                    inputClassName="h-[62px] w-full p-[10px_40px_10px_10px] sm:p-[19px_40px_19px_19px] bg-[linear-gradient(316deg,rgba(0,0,0,0.65)_0%,rgba(0,0,0,0.65)_99%)] border-(--border-gray-50) rounded-xl font-inter text-base text-(--text-white) tracking-[0.8%] focus:outline-none focus:shadow-none border border-(--border-gray-50) placeholder:text-(--text-white) placeholder:capitalize placeholder:font-urbanist"
                     required
                     iconToggler={
                         <CustomBtn
                             type="button"
-                            buttonClass="absolute bottom-[18px] right-0 inline-block bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 px-[19px] hover:bg-transparent cursor-pointer"
+                            buttonClass="absolute bottom-[18px] right-0 inline-block bg-transparent border-none text-2xl focus:outline-none focus:shadow-none focus:ring-0 pr-[10px] sm:pr-[15px] hover:bg-transparent cursor-pointer"
                             onClick={() => passwordToggle('password1')}
                             icon={isPasswordVisible['password1'] ? <PiEyeLight /> : <PiEyeSlash />}
                         />
@@ -49,7 +49,7 @@ const LogInForm = () => {
                     }
                 />
 
-                <Text as='p' className='login-form-para mt-[14px]'>Forgot your password? <Link to='/' className="capitalize font-semibold underline">reset now</Link></Text>
+                <Text as='p' className='login-form-para mt-[14px] [text-wrap-style:pretty]'>Forgot your password? <Link to='/' className="capitalize font-semibold underline">reset now</Link></Text>
 
                 <CustomBtn
                     type="button"
