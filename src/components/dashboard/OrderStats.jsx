@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import ApexCharts from 'react-apexcharts';
 import Text from '../ui/Text';
 import CustomSelect from '../ui/CustomSelect';
+import { useGetAllOrderQuery } from '../../redux/slice/apiSlices/orderStatsApiSlice';
 
 const OrderStats = () => {
 
-    const [series] = useState([{
-        name: 'order stats',
-        data: [40, 30, 35, 45, 38, 49]
-    }]);
+    const {data,isLoading,isError,error} = useGetAllOrderQuery();
 
-    const [options] = useState({
+    const {categories,allSeries} = data || {}; 
+
+    const chartOptions = {
         chart: {
             height: '100%',
             width: '100%',
@@ -38,8 +38,7 @@ const OrderStats = () => {
         dataLabels: { enabled: false },
         legend: { show: false },
         xaxis: {
-            categories: [
-                "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+            categories: categories || [],
             labels: {
                 rotate: 0,
                 trim: true,
@@ -189,7 +188,7 @@ const OrderStats = () => {
                 }
             }
         ]
-    });
+    }
 
     const [selectedValue, setSelectedValue] = useState("monthly");
 
@@ -214,8 +213,8 @@ const OrderStats = () => {
                 </div>
                 <div className='h-[40vh]'>
                     <ApexCharts
-                        options={options}
-                        series={series}
+                        options={chartOptions}
+                        series={allSeries || []}
                         type="bar"
                         height="100%"
                     />

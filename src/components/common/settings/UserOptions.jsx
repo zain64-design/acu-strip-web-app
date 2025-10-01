@@ -19,8 +19,8 @@ const UserOptions = () => {
     <Text as='ul' className='[&>li:not(:last-child)]:pb-[35px] mt-5 sm:mt-[9px]'>
       {userNavigation.map(({id,name,route,icon})=> (
         <li key={id}>
-          <Link to={route} className='w-full flex gap-2 sm:gap-[19px] flex-row flex-start items-center font-inter font-normal text-base md:text-lg text-(--text-black) cursor-pointer hover:text-(--text-primary) transition duration-300 ease-in-out'>
-          {icon}
+          <Link to={route} className='w-full flex gap-2 sm:gap-[19px] flex-row flex-start items-center font-inter font-normal text-base md:text-lg text-(--text-black) cursor-pointer hover:text-(--text-primary) transition duration-300 ease-in-out pl-11 relative'>
+          <Text as='span' className='absolute left-0'>{icon}</Text>
           <Text as='span'>{name}</Text>
           <ChevronSharpIcon className='ml-auto'/></Link>
         </li>

@@ -18,7 +18,6 @@ const LogInForm = () => {
     return (
         <>
             <form>
-                <div className=""></div>
                 <CustomInput
                     label="Email"
                     type="email"
@@ -49,7 +48,7 @@ const LogInForm = () => {
                     }
                 />
 
-                <Text as='p' className='login-form-para mt-[14px] [text-wrap-style:pretty]'>Forgot your password? <Link to='/' className="capitalize font-semibold underline">reset now</Link></Text>
+                <Text as='p' className='login-form-para mt-[14px] [text-wrap-style:pretty]'>Forgot your password? <Link to='/forgot-password' className="capitalize font-semibold underline">reset now</Link></Text>
 
                 <CustomBtn
                     type="button"

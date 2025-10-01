@@ -2,8 +2,16 @@ import React from 'react'
 import UserProfile from './UserProfile'
 import CustomInput from '../../ui/CustomInput'
 import CustomBtn from '../../ui/CustomBtn'
+import { useNavigate } from 'react-router'
 
 const UserEditProfile = () => {
+
+    const navigate = useNavigate();
+
+    const goToSettings = () => {
+        navigate('/settings')
+    }
+
     return (
         <>
             <form action="">
@@ -31,7 +39,7 @@ const UserEditProfile = () => {
                         autoComplete='address'
                         required
                     />
-                    <CustomInput    
+                    <CustomInput
                         label="phone number"
                         type="number"
                         name="number"
@@ -43,7 +51,7 @@ const UserEditProfile = () => {
                         required
                     />
                 </div>
-                <CustomBtn buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[98px] w-full h-[60px] md:h-[71px]' label='save changes' />
+                <CustomBtn onClick={goToSettings} buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[98px] w-full h-[60px] md:h-[71px]' label='save changes' />
             </form>
         </>
     )

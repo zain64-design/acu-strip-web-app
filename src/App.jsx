@@ -19,6 +19,7 @@ import EditProfile from "./pages/EditProfile"
 import ChangePassword from "./pages/ChangePassword"
 import FAQ from "./pages/FAQ"
 import Notification from "./pages/Notification"
+import ForgotPassword from "./pages/ForgotPassword"
 
 
 function App() {
@@ -27,31 +28,32 @@ function App() {
     <>
       <Providers>
         <ThemeProvider theme={FlowBiteTheme}>
-            <BrowserRouter>
-              <Routes>
-                <Route path="*" element={<NotFound />} />
-                <Route element={<WebLayout />}>
-                  <Route path='/dashboard' index element={<Dashboard />} />
-                  <Route path='/user-management' element={<UserManagement />} />
-                  <Route path='/vehicle-management' element={<VehicleManagement />} />
-                  <Route path='/earnings-management' element={<EarningManagement />} />
-                  <Route path='/notification' element={<Notification/>} />
-                  <Route path='/settings'>
-                    <Route index element={<Settings />} />
-                    <Route path='edit-profile' element={<EditProfile />} />
-                    <Route path='change-password' element={<ChangePassword />} />
-                    <Route path='about' element={<About />} />
-                    <Route path='privacy' element={<PrivacyPolicy />} />
-                    <Route path='faq' element={<FAQ />} />
-                    <Route path='terms-conditions' element={<TermsCondition />} />
-                    <Route path='edit' element={<EditDesc />} />
-                  </Route>
+          <BrowserRouter>
+            <Routes>
+              <Route path="*" element={<NotFound />} />
+              <Route element={<WebLayout />}>
+                <Route path='/dashboard' index element={<Dashboard />} />
+                <Route path='/user-management' element={<UserManagement />} />
+                <Route path='/vehicle-management' element={<VehicleManagement />} />
+                <Route path='/earnings-management' element={<EarningManagement />} />
+                <Route path='/notification' element={<Notification />} />
+                <Route path='/settings'>
+                  <Route index element={<Settings />} />
+                  <Route path='edit-profile' element={<EditProfile />} />
+                  <Route path='change-password' element={<ChangePassword />} />
+                  <Route path='about' element={<About />} />
+                  <Route path='privacy' element={<PrivacyPolicy />} />
+                  <Route path='faq' element={<FAQ />} />
+                  <Route path='terms-conditions' element={<TermsCondition />} />
+                  <Route path='edit' element={<EditDesc />} />
                 </Route>
-                <Route element={<AuthLayout />}>
-                  <Route path='/' index element={<LogIn />} />
-                </Route>
-              </Routes>
-            </BrowserRouter>
+              </Route>
+              <Route element={<AuthLayout />}>
+                <Route path='/' index element={<LogIn />} />
+                <Route path='/forgot-password' index element={<ForgotPassword />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
         </ThemeProvider>
       </Providers>
     </>

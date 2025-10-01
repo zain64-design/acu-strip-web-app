@@ -3,9 +3,17 @@ import CustomInput from '../../ui/CustomInput'
 import CustomBtn from '../../ui/CustomBtn'
 import usePasswordToggle from '../../../hooks/usePasswordToggle'
 import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
+import { useNavigate } from 'react-router';
 
 const UserChangePassword = () => {
-        const { isPasswordVisible, passwordToggle } = usePasswordToggle()
+    const { isPasswordVisible, passwordToggle } = usePasswordToggle();
+
+    const navigate = useNavigate();
+
+    const goToSettings = () => {
+        navigate('/settings')
+    }
+
     return (
         <>
             <form action="">
@@ -71,7 +79,7 @@ const UserChangePassword = () => {
                         }
                     />
                 </div>
-                <CustomBtn buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[178px] w-full h-[60px] md:h-[71px]' label='save changes' />
+                <CustomBtn onClick={goToSettings} buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[178px] w-full h-[60px] md:h-[71px]' label='save changes' />
             </form>
         </>
     )

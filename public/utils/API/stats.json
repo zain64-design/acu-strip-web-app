@@ -1,22 +1,43 @@
 {
-    "statsData":[
-        {
-            "id":1,
-            "title": "total users",
-            "total": "2156",
-            "icon": "/images/stat1.png"
-        },
-        {
-            "id":2,
-            "title": "active vehicles",
-            "total": "32",
-            "icon": "/images/stat2.png"
-        },
-        {
-            "id":3,
-            "title": "total earning",
-            "total": "$12,000,000",
-            "icon": "/images/stat3.png"
-        }
+  "statsData": [
+    {
+      "id": 1,
+      "title": "total users",
+      "total": "2156",
+      "icon": "/images/stat1.png"
+    },
+    {
+      "id": 2,
+      "title": "active vehicles",
+      "total": "32",
+      "icon": "/images/stat2.png"
+    },
+    {
+      "id": 3,
+      "title": "total earnings",
+      "total": "$12,000,000",
+      "icon": "/images/stat3.png"
+    }
+  ],
+  "salesAnalytics": {
+    "categories": [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ],
+    "allSeries": [
+      {
+        "name": "Sales",
+        "data": [75000, 40000, 100000, 60000, 80000, 50000, 120000, 80000, 100000, 70000, 110000, 145000]
+      }
     ]
+  },
+  "orderStats": {
+    "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "allSeries": [
+      {
+        "name": "Orders",
+        "data": [40, 30, 35, 45, 38, 49]
+      }
+    ]
+  }
 }

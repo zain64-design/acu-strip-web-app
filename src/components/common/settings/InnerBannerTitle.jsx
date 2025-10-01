@@ -68,7 +68,7 @@ const   InnerBannerTitle = ({
       {isSave && (
         <CustomBtn
           buttonClass="btn-primary h-[52px] font-inter text-base font-semibold min-w-full xs:min-w-[181px] ml-auto"
-          onClick={GoEditRoute}
+          onClick={goBack}
           label="save changes"
         />
       )}
