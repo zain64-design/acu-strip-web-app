@@ -29,7 +29,7 @@ const VehicleTableArea = () => {
         <>
             <div className="mt-[48px]">
                 <div className="flex items-center justify-between">
-                    <Text className="font-urbanist font-bold text-lg sm:text-[22px] text-(--text-black-10) leading-normal capitalize">Vehicle Management</Text>
+                    <Text className="font-inter font-bold text-lg sm:text-[22px] text-(--text-black-10) leading-normal capitalize">Vehicle Management</Text>
                     <Link to="/vehicle-management" className='font-inter font-semibold text-lg text-(--text-primary) capitalize'>view all</Link>
                 </div>
                 <CustomTable tbHeader={tbHeader} data={data?.slice(0, 4)} isLoading={isLoading} error={error} renderRow={renderRow} tbWrapperClass='mt-[31px]' tbClass='bg-transparent' tbHeadCellClass='bg-transparent' />

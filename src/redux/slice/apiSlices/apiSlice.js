@@ -14,7 +14,7 @@ export const apiSlice = createApi({
                     }
                 },
                 transformResponse: async (data) => {
-                    await new Promise((res) => setTimeout(res, 2000));
+                    // await new Promise((res) => setTimeout(res, 2000));
                     // throw new Error("Custom test error: Something went wrong"); 
                     return data?.userManagementData || [];
                 },

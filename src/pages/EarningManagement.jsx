@@ -37,7 +37,7 @@ const EarningManagement = () => {
                     totalPages={6}
                     currentPage={page}
                     onPageChange={setPage}
-                    className="mt-[108px] justify-end px-[27px]"
+                    className="mt-[108px] sm:justify-end px-[27px]"
                   />
     </div>
     </>

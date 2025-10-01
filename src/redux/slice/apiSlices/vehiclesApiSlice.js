@@ -11,7 +11,7 @@ const vehiclesApiSlice = apiSlice.injectEndpoints({
                     }
                 },
                 transformResponse: async (data) => {
-                    await new Promise((res) => setTimeout(res, 2000));
+                    // await new Promise((res) => setTimeout(res, 2000));
                     return data?.vehicleManagementData || [];
                 }
             })
