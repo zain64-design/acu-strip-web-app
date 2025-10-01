@@ -24,7 +24,7 @@ const ForgotForm = () => {
                 <form action="" className='mt-8'>
                     <CustomInput
                         label="email address"
-                        type="text"
+                        type="email"
                         name="address"
                         placeholder="enter email address"
                         wrapperClassName=''
