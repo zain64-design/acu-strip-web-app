@@ -7,6 +7,7 @@ import NotFound from "./components/common/error/NotFound"
 import LogIn from "./pages/LogIn"
 import Dashboard from "./pages/Dashboard"
 import UserManagement from "./pages/UserManagement"
+import UserManagementEdit from "./pages/UserManagementEdit"
 import VehicleManagement from "./pages/VehicleManagement"
 import EarningManagement from "./pages/EarningManagement"
 import Settings from "./pages/Settings"
@@ -33,7 +34,10 @@ function App() {
               <Route path="*" element={<NotFound />} />
               <Route element={<WebLayout />}>
                 <Route path='/dashboard' index element={<Dashboard />} />
-                <Route path='/user-management' element={<UserManagement />} />
+                <Route path='/user-management'>
+                  <Route index element={<UserManagement />} />
+                  <Route path='edit' element={<UserManagementEdit />} />
+                </Route>
                 <Route path='/vehicle-management' element={<VehicleManagement />} />
                 <Route path='/earnings-management' element={<EarningManagement />} />
                 <Route path='/notification' element={<Notification />} />

@@ -4,7 +4,7 @@ import CustomInput from '../../ui/CustomInput'
 import CustomBtn from '../../ui/CustomBtn'
 import { useNavigate } from 'react-router'
 
-const UserEditProfile = () => {
+const UserEditProfileForm = () => {
 
     const navigate = useNavigate();
 
@@ -57,4 +57,4 @@ const UserEditProfile = () => {
     )
 }
 
-export default UserEditProfile
+export default UserEditProfileForm

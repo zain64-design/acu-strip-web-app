@@ -33,12 +33,6 @@ const Links = () => {
             path: '/settings',
             title: 'settings',
             icon: SettingIcon
-        },
-        {
-            id: 6,
-            path: '/',
-            title: 'logout',
-            icon: LogOutIcon
         }
     ];
 

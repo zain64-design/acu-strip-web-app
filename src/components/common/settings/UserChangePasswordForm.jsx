@@ -5,7 +5,7 @@ import usePasswordToggle from '../../../hooks/usePasswordToggle'
 import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
 import { useNavigate } from 'react-router';
 
-const UserChangePassword = () => {
+const UserChangePasswordForm = () => {
     const { isPasswordVisible, passwordToggle } = usePasswordToggle();
 
     const navigate = useNavigate();
@@ -85,4 +85,4 @@ const UserChangePassword = () => {
     )
 }
 
-export default UserChangePassword
+export default UserChangePasswordForm

@@ -204,3 +204,9 @@ export const ArrowLeftIcon = ({ width = 35, height = 33, className = '' }) => (
   <path d="M16.0423 8.2395L7.29232 16.479M7.29232 16.479L16.0423 24.7186M7.29232 16.479L27.709 16.479" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
 </svg>
 );
+
+export const ChevronDownIcon = ({ width = 13, height = 7, className = '' }) => (
+<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 13 7" fill="none" className={className}>
+  <path d="M11.8488 1.02075L7.39449 5.47502C6.86845 6.00106 6.00766 6.00106 5.48161 5.47502L1.02734 1.02075" stroke="currentColor" strokeWidth="1.02476" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+);

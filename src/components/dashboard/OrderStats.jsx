@@ -207,7 +207,9 @@ const OrderStats = () => {
                     <Text as='h6' className='font-urbanist font-bold text-lg capitalize'>Order Stats</Text>
 
                     <CustomSelect
-                        className="w-[104px]"
+                        wrapperClassName="w-[104px] px-3 py-2 bg-(--bg-secondary) rounded-[4px]"
+                        labelClassName="font-urbanist font-normal text-sm text-(--text-gray-200) capitalize"
+                        itemClassName="w-full bg-(--bg-secondary) text-(--text-primary) capitalize hover:bg-(--bg-primary) hover:text-(--text-white) mb-1 transition-all duration-200 ease-in-out"
                         selectedOption={selectedOption}
                         selectedValue={selectedValue}
                         onValueChange={(value) => setSelectedValue(value)}

@@ -27,8 +27,8 @@ const UserTableArea = () => {
                         renderTrigger={() => (
                             <BiDotsVerticalRounded className="text-2xl text-(--text-black-100)" />
                         )}>
-                        <DropdownItem className="font-inter font-medium text-base text-(--text-primary) capitalize hover:!bg-(--bg-secondary-2)">edit</DropdownItem>
-                        <DropdownItem className="font-inter font-medium text-base text-(--text-primary) capitalize hover:!bg-(--bg-secondary-2)">delete</DropdownItem>
+            <DropdownItem className="font-inter font-medium text-base text-(--text-primary) capitalize  hover:!bg-(--bg-success) transition-all duration-200 ease-in-out">edit</DropdownItem>
+            <DropdownItem className="font-inter font-medium text-base text-(--text-red) capitalize hover:!bg-(--bg-warning) transition-all duration-200 ease-in-out">delete</DropdownItem>
                     </Dropdown>
                 </TableCell>
             </TableRow>
