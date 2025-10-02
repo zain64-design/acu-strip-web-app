@@ -8,7 +8,9 @@ const OrderStats = () => {
 
     const {data,isLoading,isError,error} = useGetAllOrderQuery();
 
-    const {categories,allSeries} = data || {}; 
+    const {categories,allSeries} = data || {};
+
+    const seriesData = allSeries ? allSeries.map(s => ({ ...s, data: [...s.data] })) : [];
 
     const chartOptions = {
         chart: {
@@ -214,7 +216,7 @@ const OrderStats = () => {
                 <div className='h-[40vh]'>
                     <ApexCharts
                         options={chartOptions}
-                        series={allSeries || []}
+                        series={seriesData}
                         type="bar"
                         height="100%"
                     />

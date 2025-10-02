@@ -10,6 +10,9 @@ const SalesAnalytics = () => {
 
     const { categories, allSeries } = data || {};
 
+     // shallow copy + data array clone for performance & safety
+  const seriesData = allSeries ? allSeries.map(s => ({ ...s, data: [...s.data] })) : [];
+
     const chartOptions = {
         chart: {
             height: '100%',
@@ -94,7 +97,7 @@ const SalesAnalytics = () => {
             <div className='h-[35vh]'>
                 <ReactApexChart
                     options={chartOptions}
-                    series={allSeries || []}
+                    series={seriesData}
                     type="line"
                     height='100%'
                     className="mt-5"
