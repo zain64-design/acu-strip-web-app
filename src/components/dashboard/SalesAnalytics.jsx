@@ -88,7 +88,7 @@ const SalesAnalytics = () => {
         <div className="bg-(--bg-white) rounded-[15px] p-[22px] col-span-full lg:col-span-2">
             <div className="flex flex-wrap justify-between mb-[10px]">
                 <Text as='h6' className='font-urbanist font-bold text-lg capitalize'>Sales Analytics</Text>
-                <div className="flex flex-wrap items-center justify-end gap-1">
+                <div className="flex flex-wrap items-center justify-center mt-2 sm:mt-0 sm:justify-end gap-1">
                     {tabs?.map(({ key, label }) => (
                         <CustomBtn key={key} onClick={() => onTabClick(key)} buttonClass={`min-w-[65px] py-2 px-4 rounded-sm font-plus-jakarta text-sm font-normal text-(--text-gray-200) capitalize bg-(--bg-white) hover:bg-(--bg-primary) hover:text-(--text-white) cursor-pointer transition duration-300 ease-in-out ${activeTab === key ? "bg-(--bg-primary) text-(--text-white)" : ""}`} label={label} />
                     ))}
