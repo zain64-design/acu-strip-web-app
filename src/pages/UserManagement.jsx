@@ -30,7 +30,7 @@ const UserManagement = () => {
         <TableCell className='py-[23px] px-5'><span className={`badge ${status === 'activate' ? 'bg-(--bg-success) text-(--text-primary)' : 'bg-(--bg-warning) text-(--text-red)'}`}>{status}</span></TableCell>
         <TableCell>
           <Dropdown
-          className="!min-w-[100px]"
+          className="!min-w-[100px] rounded-md"
           renderTrigger={() => (
             <BiDotsVerticalRounded className="text-2xl text-(--text-black-100) cursor-pointer" />
         )}>

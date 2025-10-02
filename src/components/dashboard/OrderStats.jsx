@@ -202,7 +202,7 @@ const OrderStats = () => {
 
     return (
         <>
-            <div className="bg-(--bg-white) rounded-[15px] p-[16px] col-span-full lg:col-span-1">
+            <div className="bg-(--bg-white) rounded-[15px] p-[16px] col-span-full xl:col-span-1">
                 <div className="flex flex-wrap justify-between">
                     <Text as='h6' className='font-urbanist font-bold text-lg capitalize'>Order Stats</Text>
 

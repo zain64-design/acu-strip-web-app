@@ -23,11 +23,11 @@ const UserTableArea = () => {
                 <TableCell className='py-[23px] px-5'><span className={`badge ${status === 'activate' ? 'bg-(--bg-success) text-(--text-primary)' : 'bg-(--bg-warning) text-(--text-red)'}`}>{status}</span></TableCell>
                 <TableCell>
                     <Dropdown
-                        className="rounded-md"
+                        className="!min-w-[100px] rounded-md"
                         renderTrigger={() => (
-                            <BiDotsVerticalRounded className="text-2xl text-(--text-black-100)" />
+                            <BiDotsVerticalRounded className="text-2xl text-(--text-black-100) cursor-pointer" />
                         )}>
-            <DropdownItem className="font-inter font-medium text-base text-(--text-primary) capitalize  hover:!bg-(--bg-success) transition-all duration-200 ease-in-out">edit</DropdownItem>
+            <DropdownItem as={Link} to='/user-management/edit' className="font-inter font-medium text-base text-(--text-primary) capitalize  hover:!bg-(--bg-success) transition-all duration-200 ease-in-out">edit</DropdownItem>
             <DropdownItem className="font-inter font-medium text-base text-(--text-red) capitalize hover:!bg-(--bg-warning) transition-all duration-200 ease-in-out">delete</DropdownItem>
                     </Dropdown>
                 </TableCell>

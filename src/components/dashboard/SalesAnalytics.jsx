@@ -85,7 +85,7 @@ const SalesAnalytics = () => {
     const { activeTab, tabs: tabList, onTabClick } = useTabs(tabs, "daily");
 
     return (
-        <div className="bg-(--bg-white) rounded-[15px] p-[22px] col-span-full lg:col-span-2">
+        <div className="bg-(--bg-white) rounded-[15px] p-[22px] col-span-full xl:col-span-2">
             <div className="flex flex-wrap justify-between mb-[10px]">
                 <Text as='h6' className='font-urbanist font-bold text-lg capitalize'>Sales Analytics</Text>
                 <div className="flex flex-wrap items-center justify-center mt-2 sm:mt-0 sm:justify-end gap-1">
