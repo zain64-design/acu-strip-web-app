@@ -9,7 +9,7 @@ const SignIn = () => {
     <>
       <section className="min-h-[100vh] py-4 bg-cover bg-center bg-no-repeat content-center" style={{ backgroundImage: `url(${loginBG})` }}>
         <div className="container px-4 mx-auto">
-          <div className="max-w-[1000px] relative shadow-(--soft-shadow) rounded-3xl overflow-hidden mx-auto p-5 sm:p-[61px_41px_37px_41px] form-blur-50 form-bg z-50">
+          <div className="max-w-[1000px] relative border border-(--border-white) rounded-3xl overflow-hidden mx-auto p-5 sm:p-[61px_41px_37px_41px] form-blur-50 form-bg z-50">
             <div className="flex items-center flex-wrap justify-center lg:justify-between">
               <figure>
                 <Image src={logo} className="object-contain object-center max-w-full max-h-[80px] sm:max-h-[132px] mb-6 lg:mb-0" />
