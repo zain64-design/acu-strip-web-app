@@ -15,6 +15,7 @@ const CustomInput = ({
     labelClassName = "",
     inputClassName = "",
     iconToggler = null,
+    allowNegative = false,
 }) => {
     return (
         <>
@@ -32,8 +33,9 @@ const CustomInput = ({
                     onChange={onChange}
                     placeholder={placeholder}
                     required={required}
-                    className={twMerge(inputClassName)}
+                    className={twMerge('no-spinner',inputClassName)}
                     autoComplete={autoComplete}
+                    {...(type === "number" && !allowNegative ? { min: 0 } : {})}
                 />
                 {iconToggler && (
                     <>

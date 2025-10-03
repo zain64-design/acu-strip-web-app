@@ -4,10 +4,14 @@ import CustomBtn from '../../ui/CustomBtn'
 import Text from '../../ui/Text'
 import { ArrowLeftIcon } from '../../ui/Icons'
 import useGoBack from '../../../hooks/useGoBack'
+import useModal from '../../../hooks/useModal'
+import CheckEmailModal from './CheckEmailModal'
 
 const ForgotForm = () => {
 
-    const goBack = useGoBack()
+    const goBack = useGoBack();
+
+    const { showModal, handleShowModal, handleCloseModal } = useModal();
 
     return (
         <>
@@ -20,7 +24,7 @@ const ForgotForm = () => {
                     />
                     <Text as='h4' className='font-inter font-bold text-2xl md:text-4xl text-(--text-black-10) capitalize tracking-[-0.01px] mx-auto text-center'>Forgot Password?</Text>
                 </div>
-                <Text as='p' className='font-inter font-normal text-md sm:text-lg text-(--text-black-200) text-center'>Please enter the email you use to sign in and we will send you resent link.</Text>
+                <Text as='p' className='font-inter font-normal text-md sm:text-lg text-(--text-black-200) text-center'>Please enter the email you use to sign in and we will send you reset link.</Text>
                 <form action="" className='mt-8'>
                     <CustomInput
                         label="email address"
@@ -33,9 +37,10 @@ const ForgotForm = () => {
                         autoComplete='address'
                         required
                     />
-                    <CustomBtn buttonClass='btn-primary font-urbanist text-xl font-semibold mt-4 w-full h-[55px]' label='submit' />
+                    <CustomBtn onClick={handleShowModal} buttonClass='btn-primary font-urbanist text-xl font-semibold mt-4 w-full h-[55px]' label='submit' />
                 </form>
             </div>
+            <CheckEmailModal showModal={showModal} handleCloseModal={handleCloseModal} />
         </>
     )
 }

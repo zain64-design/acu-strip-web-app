@@ -54,6 +54,7 @@ const UserEditManagementForm = () => {
                         labelClassName="font-nunito font-semibold text-sm text-(--text-gray-400) mb-[14px] capitalize"
                         inputClassName="h-[67px] w-full p-[19px_17px] bg-(--bg-grey-50) rounded-md font-nunito text-sm text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-200) placeholder:capitalize"
                         autoComplete='number'
+                        allowNegative={false}
                         required
                     />
                     <CustomInput
@@ -90,7 +91,7 @@ const UserEditManagementForm = () => {
                         onValueChange={(value) => setSelectedValue(value)}
                         placeholder="Select Option" />
                 </div>
-                <CustomBtn onClick={goToUserManage} buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[98px] w-full h-[60px] md:h-[71px]' label='save changes' />
+                <CustomBtn onClick={goToUserManage} buttonClass='btn-primary font-urbanist text-xl md:text-[28px] font-bold mt-[40px] md:mt-[110px] w-full h-[60px] md:h-[71px]' label='save changes' />
             </form>
         </>
     )

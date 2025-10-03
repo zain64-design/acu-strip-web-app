@@ -46,7 +46,7 @@ const Links = () => {
                         className={({ isActive }) =>
                             `sideLinks group ${isActive
                                 ? "font-semibold bg-(--bg-primary) text-(--text-white)"
-                                : "hover:text-(--text-white)"
+                                : ""
                             }`
                         }
                     >
@@ -56,7 +56,7 @@ const Links = () => {
                                     className={
                                         isActive
                                             ? "text-(--text-white)"
-                                            : "text-(--text-primary) group-hover:text-(--text-white)"
+                                            : "text-(--text-primary)"
                                     }
                                 />
                                 {title}

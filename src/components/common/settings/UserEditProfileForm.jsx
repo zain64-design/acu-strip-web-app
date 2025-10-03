@@ -48,6 +48,7 @@ const UserEditProfileForm = () => {
                         labelClassName="font-nunito font-semibold text-sm text-(--text-gray-400) mb-[14px] capitalize"
                         inputClassName="h-[67px] w-full p-[19px_17px] bg-(--bg-grey-50) rounded-md font-nunito text-sm text-(--text-black) focus:outline-none focus:shadow-none border-none placeholder:text-(--text-gray-200) placeholder:capitalize"
                         autoComplete='number'
+                        allowNegative={false}
                         required
                     />
                 </div>

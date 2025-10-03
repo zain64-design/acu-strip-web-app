@@ -21,7 +21,7 @@ const Dashboard = () => {
     <>
       <div className="flex flex-wrap items-center justify-center sm:justify-end mb-[10px] gap-1">
         {tabs?.map(({ key, label }) => (
-          <CustomBtn key={key} onClick={()=> onTabClick(key)} buttonClass={`min-w-[65px] py-2 px-4 rounded-sm font-plus-jakarta text-sm font-normal text-(--text-gray-200) capitalize bg-(--bg-secondary) hover:bg-(--bg-primary) hover:text-(--text-white) cursor-pointer transition duration-300 ease-in-out ${activeTab === key ? "bg-(--bg-primary) text-(--text-white)" : ""}`} label={label} />
+          <CustomBtn key={key} onClick={()=> onTabClick(key)} buttonClass={`min-w-[65px] py-2 px-4 rounded-sm font-plus-jakarta text-sm font-normal text-(--text-gray-200) capitalize bg-(--bg-secondary) hover:bg-(--bg-primary-2) hover:text-(--text-primary) cursor-pointer transition duration-300 ease-in-out ${activeTab === key ? "bg-(--bg-primary) text-(--text-white)" : ""}`} label={label} />
         ))}
       </div>
       {/* {activeTab === 'daily' && ()} */}
