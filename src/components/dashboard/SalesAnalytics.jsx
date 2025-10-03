@@ -1,19 +1,29 @@
-import ReactApexChart from 'react-apexcharts';
 import Text from '../ui/Text';
 import { useGetAllSalesQuery } from '../../redux/slice/apiSlices/salesAnalyticsApiSlice';
 import useTabs from '../../hooks/useTabs';
 import CustomBtn from '../ui/CustomBtn';
+import { memo, useMemo } from 'react';
+import ApexCharts from 'react-apexcharts';
 
 const SalesAnalytics = () => {
 
-    const { data, isLoading, isError, error } = useGetAllSalesQuery();
+    const { data, isLoading, isError, error } = useGetAllSalesQuery('', {
+  keepUnusedDataFor: 60,
+});
 
     const { categories, allSeries } = data || {};
 
-     // shallow copy + data array clone for performance & safety
-  const seriesData = allSeries ? allSeries.map(s => ({ ...s, data: [...s.data] })) : [];
+    const allValues = allSeries
+        ? allSeries.flatMap(s => s.data)
+        : [];
 
-    const chartOptions = {
+    const minValue = allValues.length > 0 ? Math.min(...allValues) : 0;
+    const maxValue = allValues.length > 0 ? Math.max(...allValues) : 100;
+
+    const seriesData = useMemo(() => (allSeries ? allSeries.map(s => ({ ...s, data: [...s.data] })) : []
+    ), [allSeries]);
+
+    const chartOptions = useMemo(() => ({
         chart: {
             height: '100%',
             width: '100%',
@@ -53,8 +63,8 @@ const SalesAnalytics = () => {
         },
         yaxis: {
             show: true,
-            max: 150000,
-            min: 25000,
+            max: maxValue,
+            min: minValue,
             axisBorder: { show: false },
             axisTicks: { show: false },
             labels: {
@@ -72,8 +82,135 @@ const SalesAnalytics = () => {
         grid: {
             borderColor: '#d0d0d0',
             strokeDashArray: 10,
-        }
-    };
+        },
+        responsive: [
+            {
+                breakpoint: 576,
+                options: {
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '10px',
+                            }
+                        },
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: (value) => {
+                                return `$${value / 1000}K`;
+                            },
+                            style: {
+                                fontSize: '10px',
+                                colors: '#64748B',
+                                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                                fontWeight: '400',
+                            }
+                        }
+                    },
+                }
+            },
+            {
+                breakpoint: 768,
+                options: {
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: (value) => {
+                                return `$${value / 1000}K`;
+                            },
+                            style: {
+                                fontSize: '12px',
+                                colors: '#64748B',
+                                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                                fontWeight: '400',
+                            }
+                        }
+                    },
+                }
+            },
+            {
+                breakpoint: 992,
+                options: {
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: (value) => {
+                                return `$${value / 1000}K`;
+                            },
+                            style: {
+                                fontSize: '12px',
+                                colors: '#64748B',
+                                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                                fontWeight: '400',
+                            }
+                        }
+                    },
+                }
+            },
+            {
+                breakpoint: 1200,
+                options: {
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: (value) => {
+                                return `$${value / 1000}K`;
+                            },
+                            style: {
+                                fontSize: '12px',
+                                colors: '#64748B',
+                                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                                fontWeight: '400',
+                            }
+                        }
+                    },
+                }
+            },
+            {
+                breakpoint: 1440,
+                options: {
+                    xaxis: {
+                        labels: {
+                            style: {
+                                fontSize: '12px',
+                            }
+                        },
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: (value) => {
+                                return `$${value / 1000}K`;
+                            },
+                            style: {
+                                fontSize: '12px',
+                                colors: '#64748B',
+                                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                                fontWeight: '400',
+                            }
+                        }
+                    },
+                }
+            }
+        ]
+    }), [categories, maxValue, minValue]);
 
     const tabs = [
         { key: "daily", label: "Daily" },
@@ -95,16 +232,19 @@ const SalesAnalytics = () => {
                 </div>
             </div>
             <div className='h-[35vh]'>
-                <ReactApexChart
+                <ChartWrapper
                     options={chartOptions}
                     series={seriesData}
                     type="line"
                     height='100%'
-                    className="mt-5"
                 />
             </div>
         </div>
     )
 }
+
+export const ChartWrapper = memo(({ options, series }) => (
+    <ApexCharts options={options} series={series} type="line" height="100%" className="mt-5" />
+));
 
 export default SalesAnalytics

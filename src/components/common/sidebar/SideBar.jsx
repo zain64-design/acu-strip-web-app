@@ -22,7 +22,7 @@ const SideBar = ({ isMenuOpen, closeMenuDrawer }) => {
           <SideBarLogo className="h-[50px]" />
           <CustomBtn onClick={closeMenuDrawer} buttonClass=" bg-transparent dark:bg-transparent text-2xl text-(--text-primary) cursor-pointer block xl:hidden hover:bg-transparent focus:ring-transparent dark:focus:ring-transparent" icon={<IoCloseOutline />} />
         </div>
-        <UserWelcome wrapperClass='mb-4'/>
+        <UserWelcome wrapperClass='sm:hidden mb-4'/>
         <Text as='ul'>
           <Links />
         </Text>
