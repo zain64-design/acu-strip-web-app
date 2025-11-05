@@ -223,7 +223,7 @@ const FlowBiteTheme = createTheme({
     }
   },
   "content": {
-    "base": "animate__animated animate__bounceIn animate__delay-0.5s relative h-full w-full p-4 md:h-auto",
+    "base": "animate__animated animate__bounceIn animate__faster relative h-full w-full p-4 md:h-auto",
     "inner": "relative flex max-h-[90dvh] flex-col rounded-lg bg-white shadow dark:bg-gray-700"
   },
   "body": {

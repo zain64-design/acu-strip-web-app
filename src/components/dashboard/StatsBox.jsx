@@ -1,11 +1,11 @@
 import React from 'react'
-import { useGetAllStatsQuery } from '../../redux/slice/apiSlices/statsApiSlice';
+import { useGetAllDailyStatsQuery} from '../../redux/slice/apiSlices/statsApiSlice';
 import Image from '../ui/Image';
 import Text from '../ui/Text';
 
 const StatsBox = () => {
 
-    const { data, isLoading, error } = useGetAllStatsQuery('');
+    const { data, isLoading, error } = useGetAllDailyStatsQuery('');
 
     return (
         <>

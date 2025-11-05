@@ -3,7 +3,7 @@ import apiSlice from "./apiSlice";
 const statsApiSlice = apiSlice.injectEndpoints({
     endpoints:(builder) => {
         return {
-            getAllStats:builder.query({
+            getAllDailyStats:builder.query({
                 query: (value)=> {
                     return {
                         url:'/stats.json',
@@ -14,9 +14,16 @@ const statsApiSlice = apiSlice.injectEndpoints({
                     // await new Promise((res) => setTimeout(res, 3000));
                     return data?.statsData || [];
                 }
-            })
+            }),
+            // getAllWeeklyStats:builder.query({
+            //     query:(value)=> {
+            //         return{
+            //             url: ''
+            //         }
+            //     }
+            // })
         }
     }
 })
 
-export const {useGetAllStatsQuery} = statsApiSlice;
+export const {useGetAllDailyStatsQuery} = statsApiSlice;
