@@ -3,7 +3,7 @@ import apiSlice from "./apiSlice";
 const statsApiSlice = apiSlice.injectEndpoints({
     endpoints:(builder) => {
         return {
-            getAllDailyStats:builder.query({
+            getDailyStats:builder.query({
                 query: (value)=> {
                     return {
                         url:'/stats.json',
@@ -11,11 +11,12 @@ const statsApiSlice = apiSlice.injectEndpoints({
                     }
                 },
                 transformResponse: async (data) => {
-                    // await new Promise((res) => setTimeout(res, 3000));
+                    await new Promise((res) => setTimeout(res, 1000));
+                    // throw new Error("Custom test error: Something went wrong"); 
                     return data?.statsData?.daily || [];
                 }
             }),
-            getAllWeeklyStats:builder.query({
+            getWeeklyStats:builder.query({
                 query:(value)=> {
                     return{
                         url: '/stats.json',
@@ -23,10 +24,11 @@ const statsApiSlice = apiSlice.injectEndpoints({
                     }
                 },
                 transformResponse: async (data) => {
+                    await new Promise((res) => setTimeout(res, 1000));
                     return data?.statsData?.weekly || [];
                 }
             }),
-            getAllMonthlyStats:builder.query({
+            getMonthlyStats:builder.query({
                 query:(value)=> {
                     return{
                         url: '/stats.json',
@@ -34,10 +36,11 @@ const statsApiSlice = apiSlice.injectEndpoints({
                     }
                 },
                 transformResponse: async (data) => {
+                    await new Promise((res) => setTimeout(res, 1000));
                     return data?.statsData?.monthly || [];
                 }
             }),
-            getAllYearlyStats:builder.query({
+            getYearlyStats:builder.query({
                 query:(value)=> {
                     return{
                         url: '/stats.json',
@@ -45,6 +48,7 @@ const statsApiSlice = apiSlice.injectEndpoints({
                     }
                 },
                 transformResponse: async (data) => {
+                    await new Promise((res) => setTimeout(res, 1000));
                     return data?.statsData?.yearly || [];
                 }
             })
@@ -52,4 +56,4 @@ const statsApiSlice = apiSlice.injectEndpoints({
     }
 })
 
-export const {useGetAllDailyStatsQuery,useGetAllWeeklyStatsQuery,useGetAllMonthlyStatsQuery,useGetAllYearlyStatsQuery} = statsApiSlice;
+export const {useLazyGetDailyStatsQuery,useLazyGetWeeklyStatsQuery,useLazyGetMonthlyStatsQuery,useLazyGetYearlyStatsQuery} = statsApiSlice;

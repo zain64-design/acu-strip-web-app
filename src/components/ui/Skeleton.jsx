@@ -10,10 +10,11 @@ const Skeleton = ({
   wrapperClass = "",
 }) => {
   const skeletonClasses = {
-    thumbnail: "w-20 h-20 rounded bg-gray-300 animate-pulse flex items-center justify-center",
-    heading: "h-6 bg-gray-300 rounded animate-pulse",
-    line: "h-4 bg-gray-300 rounded animate-pulse",
-    button: "h-12 bg-gray-300 rounded-full animate-pulse",
+    thumbnail: "skl-bg w-20 h-20 rounded flex items-center justify-center",
+    heading: "skl-bg h-6 rounded",
+    line: "skl-bg h-4 rounded",
+    button: "skl-bg h-12 rounded-full",
+    box: "skl-bg w-full h-48 rounded",
   };
 
   const renderRepeatedSkeleton = (count, baseClass) =>
@@ -48,6 +49,12 @@ const Skeleton = ({
       <div className={twMerge(wrapperClass)}>{skeletons}</div>
     ) : (
       <>{skeletons}</>
+    );
+  }
+
+if (type === "box") {
+    return (
+      <div className={twMerge(skeletonClasses.box, className)}/>
     );
   }
 

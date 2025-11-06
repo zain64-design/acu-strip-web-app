@@ -4,6 +4,7 @@ import { BASE_API_DEV, BASE_API_PROD } from "../../../libs/constant";
 export const apiSlice = createApi({
     reducerPath: 'dataGet',
     baseQuery: fetchBaseQuery({ baseUrl: process.env.NODE_ENV === 'production' ? BASE_API_PROD : BASE_API_DEV }),
+    useSuspense: true,
     endpoints: (builder) => {
         return {
             getAllUserData: builder.query({

@@ -300,6 +300,10 @@ svg>path,svg>g>path {
   @apply !rounded-[0_0_11px_11px];
 }
 
+.skl-bg {
+  @apply bg-(--skl-base) select-none overflow-hidden relative block before:absolute before:inset-0 before:bg-[linear-gradient(90deg,var(--skl-base)_0%,var(--skl-highlight)_50%,var(--skl-base)_100%)] before:animate-skl before:h-full before:w-full;
+}
+
 }
 
 @layer utilities {}
@@ -364,5 +368,18 @@ svg>path,svg>g>path {
   --border-gray-300: #D9D9D9;
 
   --soft-shadow: -0.5px -0.5px #fff, 0.5px 0.5px #fff;
+
+    --skl-base: #ebebeb;
+    --skl-highlight: #f5f5f5;
+
+    --animate-skl: skl 1.5s ease-in-out infinite;
+  @keyframes skl {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
 
 }

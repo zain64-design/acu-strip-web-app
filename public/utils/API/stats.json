@@ -4,7 +4,7 @@
       {
         "id": 1,
         "title": "total users",
-        "total": "2156",
+        "total": "215",
         "icon": "/images/stat1.png"
       },
       {
@@ -24,19 +24,19 @@
       {
         "id": 1,
         "title": "total users",
-        "total": "2156",
+        "total": "2,156",
         "icon": "/images/stat1.png"
       },
       {
         "id": 2,
         "title": "active vehicles",
-        "total": "32",
+        "total": "62",
         "icon": "/images/stat2.png"
       },
       {
         "id": 3,
         "title": "total earnings",
-        "total": "$12,000,000",
+        "total": "$16,000,000",
         "icon": "/images/stat3.png"
       }
     ],
@@ -44,19 +44,19 @@
       {
         "id": 1,
         "title": "total users",
-        "total": "2156",
+        "total": "21,568",
         "icon": "/images/stat1.png"
       },
       {
         "id": 2,
         "title": "active vehicles",
-        "total": "32",
+        "total": "120",
         "icon": "/images/stat2.png"
       },
       {
         "id": 3,
         "title": "total earnings",
-        "total": "$12,000,000",
+        "total": "$18,000,000",
         "icon": "/images/stat3.png"
       }
     ],
@@ -64,19 +64,19 @@
       {
         "id": 1,
         "title": "total users",
-        "total": "2156",
+        "total": "30,000",
         "icon": "/images/stat1.png"
       },
       {
         "id": 2,
         "title": "active vehicles",
-        "total": "32",
+        "total": "180",
         "icon": "/images/stat2.png"
       },
       {
         "id": 3,
         "title": "total earnings",
-        "total": "$12,000,000",
+        "total": "$21,000,000",
         "icon": "/images/stat3.png"
       }
     ]
