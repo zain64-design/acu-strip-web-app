@@ -12,18 +12,44 @@ const statsApiSlice = apiSlice.injectEndpoints({
                 },
                 transformResponse: async (data) => {
                     // await new Promise((res) => setTimeout(res, 3000));
-                    return data?.statsData || [];
+                    return data?.statsData?.daily || [];
                 }
             }),
-            // getAllWeeklyStats:builder.query({
-            //     query:(value)=> {
-            //         return{
-            //             url: ''
-            //         }
-            //     }
-            // })
+            getAllWeeklyStats:builder.query({
+                query:(value)=> {
+                    return{
+                        url: '/stats.json',
+                        method: 'GET',
+                    }
+                },
+                transformResponse: async (data) => {
+                    return data?.statsData?.weekly || [];
+                }
+            }),
+            getAllMonthlyStats:builder.query({
+                query:(value)=> {
+                    return{
+                        url: '/stats.json',
+                        method: 'GET',
+                    }
+                },
+                transformResponse: async (data) => {
+                    return data?.statsData?.monthly || [];
+                }
+            }),
+            getAllYearlyStats:builder.query({
+                query:(value)=> {
+                    return{
+                        url: '/stats.json',
+                        method: 'GET',
+                    }
+                },
+                transformResponse: async (data) => {
+                    return data?.statsData?.yearly || [];
+                }
+            })
         }
     }
 })
 
-export const {useGetAllDailyStatsQuery} = statsApiSlice;
+export const {useGetAllDailyStatsQuery,useGetAllWeeklyStatsQuery,useGetAllMonthlyStatsQuery,useGetAllYearlyStatsQuery} = statsApiSlice;

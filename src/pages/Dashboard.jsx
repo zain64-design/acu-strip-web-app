@@ -26,18 +26,23 @@ const Dashboard = () => {
           <CustomBtn key={key} onClick={() => onTabClick(key)} buttonClass={`min-w-[65px] py-2 px-4 rounded-sm font-plus-jakarta text-sm font-normal text-(--text-gray-200) capitalize bg-(--bg-secondary) hover:bg-(--bg-primary-2) hover:text-(--text-primary) cursor-pointer transition duration-300 ease-in-out ${activeTab === key ? "bg-(--bg-primary) text-(--text-white)" : ""}`} label={label} />
         ))}
       </div>
-      <Activity mode={activeTab === 'daily' ? 'visible' : 'hidden'}>
-        <DailyData />
-      </Activity>
-      <Activity mode={activeTab === 'weekly' ? 'visible' : 'hidden'}>
-        <WeeklyData />
-      </Activity>
-      <Activity mode={activeTab === 'monthly' ? 'visible' : 'hidden'}>
-        <MonthlyData />
-      </Activity>
-      <Activity mode={activeTab === 'yearly' ? 'visible' : 'hidden'}>
-        <YearlyData />
-      </Activity>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <Activity mode={activeTab === 'daily' ? 'visible' : 'hidden'}>
+          <DailyData />
+        </Activity>
+        <Activity mode={activeTab === 'weekly' ? 'visible' : 'hidden'}>
+          <WeeklyData />
+        </Activity>
+        <Activity mode={activeTab === 'monthly' ? 'visible' : 'hidden'}>
+          <MonthlyData />
+        </Activity>
+        <Activity mode={activeTab === 'yearly' ? 'visible' : 'hidden'}>
+          <YearlyData />
+        </Activity>
+        
+        <SalesAnalytics />
+        <OrderStats />
+      </div>
       <UserTableArea />
       <VehicleTableArea />
     </>
@@ -49,11 +54,7 @@ export default Dashboard
 export const DailyData = () => {
   return (
     <>
-      <div className="animate__animated animate__fadeIn animate__fast grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <StatsBox />
-        <SalesAnalytics />
-        <OrderStats />
-      </div>
+      <StatsBox />
     </>
   )
 }
@@ -61,11 +62,7 @@ export const DailyData = () => {
 export const WeeklyData = () => {
   return (
     <>
-      <div className="animate__animated animate__fadeIn animate__fast grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <StatsBox />
-        <SalesAnalytics />
-        <OrderStats />
-      </div>
+      <StatsBox />
     </>
   )
 }
@@ -73,11 +70,7 @@ export const WeeklyData = () => {
 export const MonthlyData = () => {
   return (
     <>
-      <div className="animate__animated animate__fadeIn animate__fast grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <StatsBox />
-        <SalesAnalytics />
-        <OrderStats />
-      </div>
+      <StatsBox />
     </>
   )
 }
@@ -85,11 +78,7 @@ export const MonthlyData = () => {
 export const YearlyData = () => {
   return (
     <>
-      <div className="animate__animated animate__fadeIn animate__fast grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <StatsBox />
-        <SalesAnalytics />
-        <OrderStats />
-      </div>
+      <StatsBox />
     </>
   )
 }
