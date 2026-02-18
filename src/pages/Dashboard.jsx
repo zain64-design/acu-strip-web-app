@@ -54,7 +54,7 @@ const Dashboard = () => {
         <Activity mode={activeTab === 'daily' ? 'visible' : 'hidden'}>
           {isErrorDaily ? <Text as='h6'>{JSON.stringify(errorMsgDaily?.message || "Failed to load daily stats 😢")}</Text> 
           :isDailyLoading ? Array.from({length:3})?.map((_,index)=> <Skeleton key={index} type="box" className='h-[165px] rounded-lg' />)
-          :<StatsBox data={dailyData} />} 
+          :<StatsBox data={dailyData} />}
         </Activity>
 
         <Activity mode={activeTab === 'weekly' ? 'visible' : 'hidden'}>
